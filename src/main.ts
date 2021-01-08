@@ -1,9 +1,9 @@
 import {createApp} from 'vue';
 import App from './App.vue';
-import Frank from './components/Frank.vue';
-import Frank2 from './components/Frank2.vue';
-import './index.css';
+import './index.scss';
 import {createWebHashHistory, createRouter} from 'vue-router';
+import Home from './views/Home.vue';
+import Doc from './views/Doc.vue';
 
 const history = createWebHashHistory();
 const router = createRouter({
@@ -11,11 +11,15 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: Frank
+      redirect: '/home'
     },
     {
-      path: '/frank2',
-      component: Frank2
+      path: '/home',
+      component: Home
+    },
+    {
+      path: '/doc',
+      component: Doc
     }
   ]
 });

@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Frank2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shims-vue.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Frank.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Frank2.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +27,7 @@
       <list>
         <option value="vue file" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -39,7 +44,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\Software\webstorm\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -54,7 +61,11 @@
       <option name="presentableId" value="Default" />
       <updated>1609856055533</updated>
       <workItem from="1609856058776" duration="3462000" />
-      <workItem from="1609859556981" duration="905000" />
+      <workItem from="1609859556981" duration="1137000" />
+      <workItem from="1610113513849" duration="3154000" />
+      <workItem from="1610116737269" duration="458000" />
+      <workItem from="1610117224966" duration="66000" />
+      <workItem from="1610117305506" duration="4307000" />
     </task>
     <servers />
   </component>
@@ -70,5 +81,20 @@
       <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="371" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.1280.689@0.31.1280.689" timestamp="1609857692170" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1610119505259">
+      <screen x="0" y="31" width="1280" height="689" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.31.1280.689@0.31.1280.689" timestamp="1610119505259" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/Home.vue</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

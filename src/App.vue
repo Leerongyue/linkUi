@@ -1,14 +1,7 @@
 <template>
   <div>
-    导航栏
-    |
-    <router-link to="/">Frank</router-link>
-    |
-    <router-link to="/frank2">Frank2</router-link>
+    <router-view/>
   </div>
-
-  <hr>
-  <router-view/>
 </template>
 
 <script>
@@ -17,3 +10,6 @@
     name: 'App',
   }
 </script>
+<style lang="scss" scoped>
+  @import "src/style/reset";
+</style>
