@@ -53,11 +53,12 @@
     .topnav {
       padding: 16px 16px;
 
-      ul {
+      .logo {
+        margin: 0 auto;
+      }
 
-        .menu1 {
-          margin-right: 16px;
-        }
+      ul {
+        display: none;
       }
     }
   }
