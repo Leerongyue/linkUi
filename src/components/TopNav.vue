@@ -20,7 +20,6 @@
 <style lang="scss" scoped>
 
   .topnav {
-    background: rgb(255, 198, 205);
     display: flex;
     justify-content: space-between;
     padding: 28px 32px;

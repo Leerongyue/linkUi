@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
+  import TopNav from "../components/TopNav.vue";
 
   export default {
     components: {
@@ -25,17 +25,31 @@
 <style lang="scss" scoped>
   .home {
     .banner {
-      border: 1px solid red;
+      color: rgb(68, 41, 91);
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 120px 0 80px;
-      clip-path: ellipse(80% 60% at 50% 40%);
+      padding: 80px 0 160px 0;
+      clip-path: ellipse(80% 60% at 50% 20%);
       background: linear-gradient(
           145deg,
           #e8cbc0,
           #636fa4
-      )
+      );
+
+      h2 {
+        padding: 16px 0 32px 0;
+      }
+
+      p {
+        a {
+          color: white;
+          background: rgb(99, 111, 164);
+          margin: 0 8px;
+          border-radius: 16px;
+          padding: 4px 12px;
+        }
+      }
     }
   }
 </style>
