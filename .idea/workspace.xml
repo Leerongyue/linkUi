@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/style/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Switch.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tabs.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TopNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +22,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="vue file" />
-        <option value="TypeScript File" />
-        <option value="Vue Single File Component" />
         <option value="SCSS File" />
+        <option value="Vue Class TS Component" />
+        <option value="Vue Single File Component" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -69,12 +75,24 @@
       <workItem from="1610117224966" duration="66000" />
       <workItem from="1610117305506" duration="4307000" />
       <workItem from="1610619085719" duration="1359000" />
-      <workItem from="1610683061847" duration="1465000" />
+      <workItem from="1610683061847" duration="3560000" />
     </task>
+    <task id="LOCAL-00001" summary="初始化aside的html">
+      <created>1610686184244</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610686184244</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化aside的html" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化aside的html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="147" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1609857398534">
@@ -85,10 +103,14 @@
       <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="371" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.1280.689@0.31.1280.689" timestamp="1609857692170" />
-    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup" timestamp="1610683410974">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610686182743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610683410974" />
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610686182743" />
+    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup" timestamp="1610687370916">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610687370916" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.31.1280.689@0.31.1280.689" timestamp="1610119505259" />
   </component>
   <component name="XDebuggerManager">
