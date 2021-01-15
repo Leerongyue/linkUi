@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="让TopNav是响应式的">
+    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <workItem from="1610117305506" duration="4307000" />
       <workItem from="1610619085719" duration="1359000" />
       <workItem from="1610683061847" duration="5708000" />
-      <workItem from="1610690903720" duration="73000" />
+      <workItem from="1610690903720" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="初始化aside的html">
       <created>1610686184244</created>
@@ -91,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610688857567</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Topnav添加响应式切换按钮">
+      <created>1610691050699</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610691050699</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,7 +107,8 @@
     <MESSAGE value="初始化aside的html" />
     <MESSAGE value="实现aside的切换" />
     <MESSAGE value="让TopNav是响应式的" />
-    <option name="LAST_COMMIT_MESSAGE" value="让TopNav是响应式的" />
+    <MESSAGE value="Topnav添加响应式切换按钮" />
+    <option name="LAST_COMMIT_MESSAGE" value="Topnav添加响应式切换按钮" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="147" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1609857398534">
@@ -112,10 +119,10 @@
       <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="371" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.1280.689@0.31.1280.689" timestamp="1609857692170" />
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610689710340">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610691049476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610689710340" />
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610691049476" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1610690157086">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
