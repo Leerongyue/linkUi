@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="">
+    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="让TopNav是响应式的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TopNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +67,8 @@
       <workItem from="1610117224966" duration="66000" />
       <workItem from="1610117305506" duration="4307000" />
       <workItem from="1610619085719" duration="1359000" />
-      <workItem from="1610683061847" duration="4107000" />
+      <workItem from="1610683061847" duration="5708000" />
+      <workItem from="1610690903720" duration="73000" />
     </task>
     <task id="LOCAL-00001" summary="初始化aside的html">
       <created>1610686184244</created>
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610688285350</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="让TopNav是响应式的">
+      <created>1610688857567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610688857567</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +100,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化aside的html" />
     <MESSAGE value="实现aside的切换" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现aside的切换" />
+    <MESSAGE value="让TopNav是响应式的" />
+    <option name="LAST_COMMIT_MESSAGE" value="让TopNav是响应式的" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="147" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1609857398534">
@@ -104,14 +112,18 @@
       <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="371" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.1280.689@0.31.1280.689" timestamp="1609857692170" />
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610688284470">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610689710340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610688284470" />
-    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup" timestamp="1610687370916">
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610689710340" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1610690157086">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610687370916" />
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610690157086" />
+    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup" timestamp="1610690007887">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610690007887" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.31.1280.689@0.31.1280.689" timestamp="1610119505259" />
   </component>
   <component name="XDebuggerManager">
