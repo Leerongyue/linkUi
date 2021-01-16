@@ -1,6 +1,8 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <router-link to="/home">
+      LOGO
+    </router-link>
     <ul>
       <li class="menu1">
         <router-link to="/">菜单1</router-link>
@@ -35,7 +37,7 @@
     padding: 16px;
     position: relative;
 
-    .logo {
+    a {
       margin: 0 auto;
     }
 
@@ -61,7 +63,7 @@
       display: flex;
       padding: 28px 32px;
 
-      .logo {
+      a {
         margin: 0;
       }
 

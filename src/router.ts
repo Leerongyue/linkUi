@@ -23,19 +23,23 @@ export const router = createRouter({
       component: Doc,
       children: [
         {
-          path: "/switch",
+          path: "",
+          component: Doc
+        },
+        {
+          path: "switch",
           component: Switch
         },
         {
-          path: "/button",
+          path: "button",
           component: Button
         },
         {
-          path: "/dialog",
+          path: "dialog",
           component: Dialog
         },
         {
-          path: "/tabs",
+          path: "tabs",
           component: Tabs
         },
       ]
