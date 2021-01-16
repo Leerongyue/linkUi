@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/components/Intro.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Install.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Start.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/helper.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="vue file" />
-        <option value="SCSS File" />
         <option value="Vue Class TS Component" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -34,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -46,7 +51,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\Software\webstorm\webstorm\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\Software\webstorm\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -74,6 +79,8 @@
       <workItem from="1610690903720" duration="412000" />
       <workItem from="1610692153120" duration="257000" />
       <workItem from="1610788345756" duration="2691000" />
+      <workItem from="1610803696273" duration="2797000" />
+      <workItem from="1610806524836" duration="3777000" />
     </task>
     <task id="LOCAL-00001" summary="初始化aside的html">
       <created>1610686184244</created>
@@ -141,11 +148,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610690157086" />
-    <state x="323" y="11" width="718" height="717" key="search.everywhere.popup" timestamp="1610690007887">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1610807101148">
+      <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="323" y="11" width="718" height="717" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610690007887" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.31.1280.689@0.31.1280.689" timestamp="1610119505259" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.31.1280.689@0.31.1280.689" timestamp="1610807101148" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
