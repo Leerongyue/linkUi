@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="update">
+    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="Switch css hover之后右滚">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Switch.vue" afterDir="false" />
     </list>
@@ -74,7 +74,7 @@
       <workItem from="1610788345756" duration="2691000" />
       <workItem from="1610803696273" duration="2797000" />
       <workItem from="1610806524836" duration="3905000" />
-      <workItem from="1610877481295" duration="3924000" />
+      <workItem from="1610877481295" duration="4974000" />
     </task>
     <task id="LOCAL-00001" summary="初始化aside的html">
       <created>1610686184244</created>
@@ -123,7 +123,8 @@
     <MESSAGE value="让TopNav是响应式的" />
     <MESSAGE value="Topnav添加响应式切换按钮" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Switch css hover之后右滚" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switch css hover之后右滚" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="147" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1609857398534">
@@ -134,10 +135,11 @@
       <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="371" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.1280.689@0.31.1280.689" timestamp="1609857692170" />
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610692407741">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="263" y="31" key="CommitChangelistDialog2" timestamp="1610883696610">
+      <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610692407741" />
+    <state x="263" y="31" key="CommitChangelistDialog2/0.31.1280.689@0.31.1280.689" timestamp="1610883696610" />
     <state x="339" y="118" width="601" height="524" key="find.popup" timestamp="1610878174459">
       <screen x="0" y="31" width="1280" height="689" />
     </state>
