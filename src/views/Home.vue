@@ -6,14 +6,14 @@
       <h2>基于Vue3.0的UI框架</h2>
       <p class="actions">
         <a href="https://baidu.com">Github</a>
-        <router-link to="/doc">开始</router-link>
+        <router-link to="/doc/intro">开始</router-link>
       </p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import TopNav from "../components/TopNav.vue";
+  import TopNav from '../components/TopNav.vue';
 
   export default {
     components: {
