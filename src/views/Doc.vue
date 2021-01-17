@@ -18,7 +18,7 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switchDemo">Switch组件</router-link>
+            <router-link to="/doc/switch">Switch组件</router-link>
           </li>
           <li>
             <router-link to="/doc/button">Button组件</router-link>

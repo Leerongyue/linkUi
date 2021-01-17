@@ -1,13 +1,13 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
-import Button from './components/Button.vue';
 import Dialog from './components/Dialog.vue';
 import Tabs from './components/Tabs.vue';
 import Intro from './components/Intro.vue';
 import Install from './components/Install.vue';
 import Start from './components/Start.vue';
 import SwitchDemo from './components/SwitchDemo.vue';
+import ButtonDemo from './components/ButtonDemo.vue';
 
 const history = createWebHashHistory();
 export const router = createRouter({
@@ -38,12 +38,12 @@ export const router = createRouter({
           component: Start
         },
         {
-          path: 'switchDemo',
+          path: 'switch',
           component: SwitchDemo
         },
         {
           path: 'button',
-          component: Button
+          component: ButtonDemo
         },
         {
           path: 'dialog',
