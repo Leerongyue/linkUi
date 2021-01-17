@@ -1,6 +1,8 @@
 <template>
   <button :class="{checked:value}" @click="toggle">
     <span></span>
+    <p class="on" v-if="value">on</p>
+    <p class="off" v-else>off</p>
   </button>
 </template>
 
@@ -26,7 +28,7 @@
     height: $h;
     width: $h*2;
     border: none;
-    background: gray;
+    background: rgb(191, 191, 191);
     border-radius: $h/2;
     position: relative;
 
@@ -38,15 +40,45 @@
       width: $h2;
       background: white;
       border-radius: $h2/2;
-      transition: left 250ms;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:active {
+      > span {
+        width: $h+2px;
+      }
     }
 
     &.checked {
-      background: blue;
+      background: rgb(24, 144, 255);
+
+      span {
+        left: calc(100% - #{$h2} - 2px);
+      }
+
+      &:active {
+        > span {
+          width: $h + 2px;
+          margin-left: -6px;
+        }
+      }
     }
 
-    &.checked > span {
-      left: calc(100% - #{$h2} - 2px);
+
+    .on, .off {
+      color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
+
+    .off {
+      right: 4px;
+    }
+
+    .on {
+      left: 4px;
+    }
+
   }
 </style>
