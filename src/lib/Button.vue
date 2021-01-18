@@ -1,12 +1,18 @@
 <template>
-  <button>
+  <button class="link-button" :class="`theme-${theme}`">
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
   export default {
-    inheritAttrs: false,
+    // inheritAttrs: false,
+    props: {
+      theme: {
+        type: String,
+        default: "button"
+      }
+    },
     setup() {
 
     }
