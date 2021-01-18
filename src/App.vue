@@ -6,7 +6,6 @@
 
 <script lang="ts">
   import {ref, provide} from 'vue';
-  import {router} from './router';
 
   export default {
     name: 'App',
@@ -19,7 +18,7 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "src/style/reset";
+  /*@import "src/style/reset";*/
   @import "src/style/helper";
 
   #app {
