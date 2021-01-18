@@ -1,5 +1,5 @@
 <template>
-  <button class="link-button" :class='classes'>
+  <button class="link-button" :class='classes' :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -20,6 +20,10 @@
       level: {
         type: String,
         default: 'normal'
+      },
+      disabled: {
+        type: Boolean,
+        default: false
       }
     },
     setup(props) {
@@ -43,6 +47,7 @@
   $blue: #40a9ff;
   $radius: 4px;
   $red: red;
+  $grey: grey;
 
   .link-button {
     padding: 0 12px;
@@ -162,6 +167,24 @@
         &:focus {
           color: darken($red, 10%);
         }
+      }
+    }
+
+    &.link-theme-button {
+      &[disabled] {
+        cursor: not-allowed;
+        color: $grey;
+
+        &:hover {
+          border-color: $grey;
+        }
+      }
+    }
+
+    &.link-theme-link, &.link-theme-text {
+      &[disabled] {
+        cursor: not-allowed;
+        color: $grey;
       }
     }
   }
