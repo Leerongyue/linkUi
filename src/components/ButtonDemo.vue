@@ -50,6 +50,7 @@
     <div>
       <div>支持loading</div>
       <Button loading>加载中</Button>
+      <Button>加载完成</Button>
     </div>
   </div>
 </template>

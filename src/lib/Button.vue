@@ -38,7 +38,6 @@
           [`link-theme-${theme}`]: theme,
           [`link-size-${size}`]: size,
           [`link-level-${level}`]: level,
-          [`link-loading-${loading}`]: loading
         };
       });
       return {classes};
