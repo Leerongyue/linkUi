@@ -18,7 +18,7 @@
   };
 </script>
 <style lang="scss" scoped>
-  /*@import "src/style/reset";*/
+  @import "src/style/reset";
   @import "src/style/helper";
 
   #app {
