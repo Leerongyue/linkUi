@@ -1,21 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="link-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="link-dialog-wrapper">
-      <div class="link-dialog">
-        <header>
-          <slot name="title"/>
-          <span class="link-dialog-close" @click="close"></span>
-        </header>
-        <main>
-          <slot name="content"/>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">ok</Button>
-          <Button @click="cancel">cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="link-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="link-dialog-wrapper">
+        <div class="link-dialog">
+          <header>
+            <slot name="title"/>
+            <span class="link-dialog-close" @click="close"></span>
+          </header>
+          <main>
+            <slot name="content"/>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">ok</Button>
+            <Button @click="cancel">cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
