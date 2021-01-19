@@ -3,10 +3,12 @@
     <div class="link-dialog-overlay" @click="onClickOverlay"></div>
     <div class="link-dialog-wrapper">
       <div class="link-dialog">
-        <header>标题 <span class="link-dialog-close" @click="close"></span></header>
+        <header>
+          <slot name="title"/>
+          <span class="link-dialog-close" @click="close"></span>
+        </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name="content"/>
         </main>
         <footer>
           <Button level="main" @click="ok">ok</Button>
@@ -35,7 +37,7 @@
       },
       cancel: {
         type: Function
-      }
+      },
     },
     components: {Button},
     setup(props, context) {

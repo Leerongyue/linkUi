@@ -3,7 +3,15 @@
     <div>Dialog示例</div>
     <h1>示例1</h1>
     <Button @click="toggle">toggle</Button>
-    <Dialog v-model:visible="x" :ok="f1" :cancel="f2"></Dialog>
+    <Dialog v-model:visible="x" :ok="f1" :cancel="f2" title="自定义标题">
+      <template v-slot:title>
+        <strong>加粗的标题</strong>
+      </template>
+      <template v-slot:content>
+        <div>内容1</div>
+        <div>内容2</div>
+      </template>
+    </Dialog>
   </div>
 </template>
 
