@@ -3,7 +3,7 @@
     <div>Dialog示例</div>
     <h1>示例1</h1>
     <Button @click="toggle">toggle</Button>
-    <Dialog v-model:visible="x" :ok="f1" :cancel="f2" title="自定义标题">
+    <Dialog v-model:visible="x" :ok="f1" :cancel="f2">
       <template v-slot:title>
         <strong>加粗的标题</strong>
       </template>
@@ -12,6 +12,8 @@
         <div>内容2</div>
       </template>
     </Dialog>
+    <h1>示例2</h1>
+    <Button @click="showDialog">show</Button>
   </div>
 </template>
 
@@ -19,6 +21,7 @@
   import Dialog from '../lib/Dialog.vue';
   import {ref} from 'vue';
   import Button from '../lib/Button.vue';
+  import {openDialog} from '../lib/openDialog';
 
   export default {
     name: 'DialogDemo',
@@ -32,7 +35,16 @@
         return false;
       };
       const f2 = () => {};
-      return {x, toggle, f1, f2};
+      const showDialog = () => {
+        openDialog({
+          title: '标题',
+          content: '你好',
+          ok() {console.log('ok');},
+          cancel() {console.log('cancel');},
+          closeOnClickOverlay: false
+        });
+      };
+      return {x, toggle, f1, f2, showDialog};
     }
   };
 </script>
