@@ -1,5 +1,6 @@
 <template>
   <button class="link-button" :class='classes' :disabled="disabled">
+    <span class="link-loadingIndicator" v-if="loading"></span>
     <slot/>
   </button>
 </template>
@@ -24,15 +25,20 @@
       disabled: {
         type: Boolean,
         default: false
+      },
+      loading: {
+        type: Boolean,
+        default: false
       }
     },
     setup(props) {
-      const {theme, size, level} = props;
+      const {theme, size, level, loading} = props;
       const classes = computed(() => {
         return {
           [`link-theme-${theme}`]: theme,
           [`link-size-${size}`]: size,
-          [`link-level-${level}`]: level
+          [`link-level-${level}`]: level,
+          [`link-loading-${loading}`]: loading
         };
       });
       return {classes};
@@ -187,7 +193,27 @@
         color: $grey;
       }
     }
+
+    .link-loadingIndicator {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      border-radius: 8px;
+      border-color: $blue $blue $blue transparent;
+      border-style: solid;
+      border-width: 2px;
+      animation: link-spin 1s infinite linear;
+    }
   }
 
+  @keyframes link-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 
+  }
 </style>
