@@ -76,13 +76,13 @@
 
     &-content {
       padding: 8px 0;
+    }
 
-      &-item {
-        display: none;
+    ::v-deep .link-tabs-content-item {
+      display: none;
 
-        &.selected {
-          display: block;
-        }
+      &.selected {
+        display: block;
       }
     }
   }
