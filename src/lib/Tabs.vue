@@ -1,15 +1,16 @@
 <template>
   <div>
-    Tabs
+    Tabs组件
   </div>
 </template>
 
 <script lang="ts">
+
   export default {
-    name: "Tabs"
-  }
+    name: 'Tabs'
+  };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
