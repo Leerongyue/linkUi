@@ -1,10 +1,17 @@
 <template>
   <div class="link-tabs">
     <div class="link-tabs-nav">
-      <div class="link-tabs-nav-item" v-for="(item,index) in titles" :key="index">{{item}}</div>
+      <div
+        class="link-tabs-nav-item"
+        :class="{selected: item===selected}"
+        @click="select(item)"
+        v-for="(item,index) in titles"
+        :key="index">
+        {{item}}
+      </div>
     </div>
     <div class="link-tabs-content">
-      <component class="link-tabs-content-item" v-for="(c,index) in defaults" :key="index" :is="c"></component>
+      <component class="link-tabs-content-item" :is="current"></component>
     </div>
   </div>
 </template>
@@ -12,8 +19,14 @@
 <script lang="ts">
 
   import Tab from './Tab.vue';
+  import {computed} from 'vue';
 
   export default {
+    props: {
+      selected: {
+        type: String
+      }
+    },
     name: 'Tabs',
     setup(props, context) {
       const defaults = context.slots.default();
@@ -23,7 +36,13 @@
         }
       });
       const titles = defaults.map(tag => tag.props.title);
-      return {defaults, titles};
+      const current = computed(() => {
+        return defaults.filter(tag => tag.props.title === props.selected)[0];
+      });
+      const select = (res: string) => {
+        context.emit('update:selected', res);
+      };
+      return {defaults, titles, select, current};
     }
   };
 </script>
