@@ -4,7 +4,7 @@
     <h1>示例1</h1>
     <Tabs v-model:selected="x">
       <Tab title="导航1">内容1</Tab>
-      <Tab title="导航2">内容2</Tab>
+      <Tab title="导航222222">内容2</Tab>
     </Tabs>
   </div>
 </template>
@@ -18,7 +18,7 @@
     name: 'TabsDemo',
     components: {Tab, Tabs},
     setup() {
-      const x = ref('导航1');
+      const x = ref('导航222222');
       return {x};
     }
   };

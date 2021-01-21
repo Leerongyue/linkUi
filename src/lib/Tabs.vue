@@ -1,30 +1,27 @@
 <template>
   <div class="link-tabs">
-    <div class="link-tabs-nav">
+    <div class="link-tabs-nav" ref="container">
       <div
         class="link-tabs-nav-item"
-        :class="{selected: item===selected}"
-        @click="select(item)"
         v-for="(item,index) in titles"
-        :key="index">
+        :key="index"
+        :class="{selected: item===selected}"
+        :ref="el => { if (item===selected) selectedItem = el }"
+        @click="select(item)"
+      >
         {{item}}
       </div>
+      <div class="link-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="link-tabs-content">
-      <component
-        class="link-tabs-content-item"
-        v-for="(c,index) in defaults"
-        :key="index"
-        :is="c"
-        :class="{selected:c.props.title===selected}"
-      ></component>
+      <component :is="current" :key="current.props.title"></component>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-
   import Tab from './Tab.vue';
+  import {ref, watchEffect, onMounted, computed} from 'vue';
 
   export default {
     props: {
@@ -40,11 +37,27 @@
           throw new Error('Tabs子标签必须是Tab');
         }
       });
+      const current = computed(() => {
+        return defaults.find(tag => tag.props.title === props.selected);
+      });
       const titles = defaults.map(tag => tag.props.title);
       const select = (res: string) => {
         context.emit('update:selected', res);
       };
-      return {defaults, titles, select};
+      const selectedItem = ref<HTMLDivElement>(null);
+      const container = ref<HTMLDivElement>(null);
+      const indicator = ref<HTMLDivElement>(null);
+      onMounted(() => {
+        watchEffect(() => {
+          const {width} = selectedItem.value.getBoundingClientRect();
+          indicator.value.style.width = width + 'px';
+          const {left: left1} = container.value.getBoundingClientRect();
+          const {left: left2} = selectedItem.value.getBoundingClientRect();
+          const left = left2 - left1;
+          indicator.value.style.left = left + 'px';
+        });
+      });
+      return {titles, select, selectedItem, indicator, container, current};
     }
   };
 </script>
@@ -58,9 +71,9 @@
       display: flex;
       color: $color;
       border-bottom: 1px solid $border-color;
+      position: relative;
 
       &-item {
-        padding: 8px 0;
         margin: 0 16px;
         cursor: pointer;
 
@@ -72,18 +85,20 @@
           color: $blue;
         }
       }
+
+      &-indicator {
+        position: absolute;
+        height: 3px;
+        background: $blue;
+        left: 0;
+        bottom: -1px;
+        width: 100px;
+        transition: all 250ms ease;
+      }
     }
 
     &-content {
       padding: 8px 0;
-    }
-
-    ::v-deep .link-tabs-content-item {
-      display: none;
-
-      &.selected {
-        display: block;
-      }
     }
   }
 </style>
