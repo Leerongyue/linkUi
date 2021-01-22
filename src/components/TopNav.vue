@@ -1,7 +1,9 @@
 <template>
   <div class="topnav">
     <router-link to="/home">
-      LOGO
+      <svg class="icon">
+        <use xlink:href="#icon-apple"></use>
+      </svg>
     </router-link>
     <ul>
       <li class="menu1">
@@ -31,29 +33,23 @@
 
 <style lang="scss" scoped>
   .topnav {
-    background: pink;
     display: flex;
     justify-content: space-between;
     padding: 16px;
     position: relative;
+    box-shadow: 0 5px 8px -5px #d4d4d4;
 
     a {
       margin: 0 auto;
+
+      svg {
+        width: 32px;
+        height: 32px
+      }
     }
 
     ul {
       display: none;
-
-    }
-
-    .switch {
-      width: 32px;
-      height: 32px;
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #000;
     }
   }
 
@@ -61,7 +57,8 @@
   @media (min-width: 500px) {
     .topnav {
       display: flex;
-      padding: 28px 32px;
+      padding: 24px 32px;
+      z-index: 3;
 
       a {
         margin: 0;
@@ -69,6 +66,7 @@
 
       ul {
         display: flex;
+        align-items: center;
 
         .menu1 {
           margin-right: 32px;

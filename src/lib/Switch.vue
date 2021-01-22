@@ -1,8 +1,8 @@
 <template>
-  <button :class="{checked:value}" @click="toggle">
+  <button class="link-button" :class="{'link-checked':value}" @click="toggle">
     <span></span>
-    <p class="on" v-if="value">on</p>
-    <p class="off" v-else>off</p>
+    <p class="link-on" v-if="value">on</p>
+    <p class="link-off" v-else>off</p>
   </button>
 </template>
 
@@ -24,7 +24,7 @@
 <style lang="scss" scoped>
   $h: 22px;
   $h2: $h - 4px;
-  button {
+  .link-button {
     height: $h;
     width: $h*2;
     border: none;
@@ -49,7 +49,7 @@
       }
     }
 
-    &.checked {
+    &.link-checked {
       background: rgb(24, 144, 255);
 
       span {
@@ -65,18 +65,18 @@
     }
 
 
-    .on, .off {
+    .link-on, .link-off {
       color: white;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
     }
 
-    .off {
+    .link-off {
       right: 4px;
     }
 
-    .on {
+    .link-on {
       left: 4px;
     }
 

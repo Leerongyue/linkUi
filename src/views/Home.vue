@@ -9,11 +9,22 @@
         <router-link to="/doc/intro">开始</router-link>
       </p>
     </div>
+    <div class="intro">
+      <svg class="icon">
+        <use xlink:href="#icon-Vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-light"></use>
+      </svg>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
+  import TopNav from "../components/TopNav.vue";
 
   export default {
     components: {
@@ -49,6 +60,13 @@
           border-radius: 16px;
           padding: 4px 12px;
         }
+      }
+    }
+
+    .intro {
+      svg {
+        width: 64px;
+        height: 64px;
       }
     }
   }
