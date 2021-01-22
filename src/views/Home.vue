@@ -10,15 +10,35 @@
       </p>
     </div>
     <div class="intro">
-      <svg class="icon">
-        <use xlink:href="#icon-Vue"></use>
-      </svg>
-      <svg class="icon">
-        <use xlink:href="#icon-ts"></use>
-      </svg>
-      <svg class="icon">
-        <use xlink:href="#icon-light"></use>
-      </svg>
+      <div class="wrapper">
+        <div class="unit">
+          <svg class="icon">
+            <use xlink:href="#icon-Vue"></use>
+          </svg>
+          <div class="text">
+            <h1>基于Vue3</h1>
+            <span>使用了Vue3 Composition API</span>
+          </div>
+        </div>
+        <div class="unit">
+          <svg class="icon">
+            <use xlink:href="#icon-ts"></use>
+          </svg>
+          <div class="text">
+            <h1>基于TypeScript</h1>
+            <span>源代码采用TypeScript书写</span>
+          </div>
+        </div>
+        <div class="unit">
+          <svg class="icon">
+            <use xlink:href="#icon-light"></use>
+          </svg>
+          <div class="text">
+            <h1>代码易读</h1>
+            <span>给个组件的代码都及其简洁</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -35,12 +55,14 @@
 
 <style lang="scss" scoped>
   .home {
+    height: 100%;
+
     .banner {
       color: rgb(68, 41, 91);
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 80px 0 160px 0;
+      padding: 60px 0 160px 0;
       clip-path: ellipse(80% 60% at 50% 20%);
       background: linear-gradient(
           145deg,
@@ -64,10 +86,30 @@
     }
 
     .intro {
-      svg {
-        width: 64px;
-        height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .wrapper {
+        .unit {
+          display: flex;
+          align-items: center;
+
+          svg {
+            width: 64px;
+            height: 64px;
+            margin-right: 16px;
+          }
+
+          .text {
+            width: 100%;
+            color: rgb(111, 72, 107);
+            display: flex;
+            flex-direction: column;
+          }
+        }
       }
+
     }
   }
 </style>
