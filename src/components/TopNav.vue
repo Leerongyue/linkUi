@@ -6,7 +6,7 @@
       </svg>
     </router-link>
     <ul>
-      <li class="menu1">
+      <li class="menu">
         <router-link to="/">菜单1</router-link>
       </li>
       <li>
@@ -18,11 +18,11 @@
 </template>
 
 <script lang="ts">
-  import {inject, Ref} from "vue";
+  import {inject, Ref} from 'vue';
 
   export default {
     setup() {
-      const asideVisible = inject<Ref<boolean>>("asideVisible");
+      const asideVisible = inject<Ref<boolean>>('asideVisible');
       const toggleMenu = () => {
         asideVisible.value = !asideVisible.value;
       };
@@ -35,7 +35,7 @@
   .topnav {
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    padding: 8px;
     position: relative;
     box-shadow: 0 5px 8px -5px #d4d4d4;
 
@@ -67,10 +67,6 @@
       ul {
         display: flex;
         align-items: center;
-
-        .menu1 {
-          margin-right: 32px;
-        }
       }
 
       .switch {

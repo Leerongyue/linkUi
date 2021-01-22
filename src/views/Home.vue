@@ -4,10 +4,10 @@
     <div class="banner">
       <h1>轱辘UI</h1>
       <h2>基于Vue3.0的UI框架</h2>
-      <p class="actions">
+      <div>
         <a href="https://baidu.com">Github</a>
         <router-link to="/doc/intro">开始</router-link>
-      </p>
+      </div>
     </div>
     <div class="intro">
       <div class="wrapper">
@@ -16,7 +16,7 @@
             <use xlink:href="#icon-Vue"></use>
           </svg>
           <div class="text">
-            <h1>基于Vue3</h1>
+            <h2>基于Vue3</h2>
             <span>使用了Vue3 Composition API</span>
           </div>
         </div>
@@ -25,7 +25,7 @@
             <use xlink:href="#icon-ts"></use>
           </svg>
           <div class="text">
-            <h1>基于TypeScript</h1>
+            <h2>基于TypeScript</h2>
             <span>源代码采用TypeScript书写</span>
           </div>
         </div>
@@ -34,7 +34,7 @@
             <use xlink:href="#icon-light"></use>
           </svg>
           <div class="text">
-            <h1>代码易读</h1>
+            <h2>代码易读</h2>
             <span>给个组件的代码都及其简洁</span>
           </div>
         </div>
@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts">
-  import TopNav from "../components/TopNav.vue";
+  import TopNav from '../components/TopNav.vue';
 
   export default {
     components: {
@@ -62,20 +62,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 0 160px 0;
-      clip-path: ellipse(80% 60% at 50% 20%);
+      padding: 32px 0 64px 0;
+      clip-path: ellipse(80% 70% at 50% 20%);
       background: linear-gradient(
           145deg,
           #e8cbc0,
-          #636fa4
-      );
+          #636fa4);
 
-      h2 {
-        padding: 16px 0 32px 0;
-      }
+      div {
+        margin-top: 12px;
 
-      p {
         a {
+          vertical-align: middle;
           color: white;
           background: rgb(99, 111, 164);
           margin: 0 8px;
@@ -96,8 +94,8 @@
           align-items: center;
 
           svg {
-            width: 64px;
-            height: 64px;
+            width: 6em;
+            height: 6em;
             margin-right: 16px;
           }
 
@@ -106,10 +104,41 @@
             color: rgb(111, 72, 107);
             display: flex;
             flex-direction: column;
+
           }
         }
       }
 
+    }
+
+    @media (min-width: 500px) and (max-width: 950px) {
+      .intro {
+        display: block;
+        padding-top: 24px;
+
+        .wrapper {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    @media (min-width: 950px) {
+      .intro {
+        display: block;
+        text-align: center;
+
+        .wrapper {
+          display: flex;
+          justify-content: space-around;
+
+          .unit {
+            svg {
+
+            }
+          }
+        }
+      }
     }
   }
 </style>
