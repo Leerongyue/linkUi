@@ -13,12 +13,20 @@
         <router-link to="/doc">菜单2</router-link>
       </li>
     </ul>
-    <div class="switch" @click="toggleMenu">x</div>
+    <div class="switch" @click="toggleMenu" v-if="path!=='/home'">
+      <svg class="icon" v-if="!asideVisible">
+        <use xlink:href="#icon-more"></use>
+      </svg>
+      <svg class="icon" v-if="asideVisible">
+        <use xlink:href="#icon-delete"></use>
+      </svg>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-  import {inject, Ref} from 'vue';
+  import {inject, Ref, onMounted} from 'vue';
+  import {useRoute} from 'vue-router';
 
   export default {
     setup() {
@@ -26,7 +34,8 @@
       const toggleMenu = () => {
         asideVisible.value = !asideVisible.value;
       };
-      return {toggleMenu};
+      const path = useRoute().path;
+      return {toggleMenu, asideVisible, path};
     }
   };
 </script>
@@ -50,6 +59,19 @@
 
     ul {
       display: none;
+    }
+
+    .switch {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+
     }
   }
 

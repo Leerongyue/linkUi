@@ -40,17 +40,17 @@
 </template>
 
 <script lang="ts">
-  import TopNav from "../components/TopNav.vue";
-  import {inject, Ref} from "vue";
-  import {router} from "../router";
+  import TopNav from '../components/TopNav.vue';
+  import {inject, Ref} from 'vue';
+  import {router} from '../router';
 
   export default {
     components: {
       TopNav
     },
     setup() {
-      const asideVisible = inject<Ref<boolean>>("asideVisible");
-      const width = inject<number>("width");
+      const asideVisible = inject<Ref<boolean>>('asideVisible');
+      const width = inject<number>('width');
       router.afterEach(() => {
         if (width <= 500) {
           asideVisible.value = false;
