@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="Switch css hover之后右滚" />
+    <list default="true" id="e3954ad5-857d-4ead-9987-6c5dd5a5080a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +73,7 @@
       <workItem from="1610806524836" duration="3905000" />
       <workItem from="1610877481295" duration="12986000" />
       <workItem from="1610944409267" duration="90000" />
-      <workItem from="1610944533807" duration="2860000" />
+      <workItem from="1610944533807" duration="3031000" />
     </task>
     <task id="LOCAL-00001" summary="初始化aside的html">
       <created>1610686184244</created>
@@ -134,10 +134,10 @@
       <screen x="0" y="31" width="1280" height="689" />
     </state>
     <state x="371" y="127" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.1280.689@0.31.1280.689" timestamp="1609857692170" />
-    <state x="263" y="31" key="CommitChangelistDialog2" timestamp="1610888392074">
-      <screen x="0" y="31" width="1280" height="689" />
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1610947419555">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610692407741" />
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610947419555" />
     <state x="263" y="31" key="CommitChangelistDialog2/0.31.1280.689@0.31.1280.689" timestamp="1610888392074" />
     <state x="339" y="118" width="601" height="524" key="find.popup" timestamp="1610878174459">
       <screen x="0" y="31" width="1280" height="689" />
