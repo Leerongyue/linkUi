@@ -10,33 +10,31 @@
       </div>
     </div>
     <div class="intro">
-      <div class="wrapper">
-        <div class="unit">
-          <svg class="icon">
-            <use xlink:href="#icon-Vue"></use>
-          </svg>
-          <div class="text">
-            <h2>基于Vue3</h2>
-            <span>使用了Vue3 Composition API</span>
-          </div>
+      <div class="unit">
+        <svg class="icon">
+          <use xlink:href="#icon-Vue"></use>
+        </svg>
+        <div class="text">
+          <h2>基于Vue3</h2>
+          <span>使用了Vue3 Composition API</span>
         </div>
-        <div class="unit">
-          <svg class="icon">
-            <use xlink:href="#icon-ts"></use>
-          </svg>
-          <div class="text">
-            <h2>基于TypeScript</h2>
-            <span>源代码采用TypeScript书写</span>
-          </div>
+      </div>
+      <div class="unit">
+        <svg class="icon">
+          <use xlink:href="#icon-ts"></use>
+        </svg>
+        <div class="text">
+          <h2>基于TypeScript</h2>
+          <span>源代码采用TypeScript书写</span>
         </div>
-        <div class="unit">
-          <svg class="icon">
-            <use xlink:href="#icon-light"></use>
-          </svg>
-          <div class="text">
-            <h2>代码易读</h2>
-            <span>给个组件的代码都及其简洁</span>
-          </div>
+      </div>
+      <div class="unit">
+        <svg class="icon">
+          <use xlink:href="#icon-light"></use>
+        </svg>
+        <div class="text">
+          <h2>代码易读</h2>
+          <span>给个组件的代码都及其简洁</span>
         </div>
       </div>
     </div>
@@ -44,7 +42,7 @@
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
+  import TopNav from "../components/TopNav.vue";
 
   export default {
     components: {
@@ -85,59 +83,37 @@
 
     .intro {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      .wrapper {
-        .unit {
+      .unit {
+        display: flex;
+        align-items: center;
+
+        svg {
+          width: 6em;
+          height: 6em;
+          margin-right: 16px;
+        }
+
+        .text {
+          width: 100%;
+          color: rgb(111, 72, 107);
           display: flex;
-          align-items: center;
+          flex-direction: column;
 
-          svg {
-            width: 6em;
-            height: 6em;
-            margin-right: 16px;
-          }
-
-          .text {
-            width: 100%;
-            color: rgb(111, 72, 107);
-            display: flex;
-            flex-direction: column;
-
-          }
         }
       }
-
     }
 
-    @media (min-width: 500px) and (max-width: 950px) {
+    @media (min-width: 500px) {
       .intro {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         padding-top: 24px;
-
-        .wrapper {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-        }
-      }
-    }
-    @media (min-width: 950px) {
-      .intro {
-        display: block;
-        text-align: center;
-
-        .wrapper {
-          display: flex;
-          justify-content: space-around;
-
-          .unit {
-            svg {
-
-            }
-          }
-        }
       }
     }
   }
