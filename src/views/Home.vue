@@ -35,7 +35,7 @@
           </svg>
           <div class="text">
             <h2>代码易读</h2>
-            <span>给个组件的代码都及其简洁</span>
+            <span>给个组件的代码都极其简洁</span>
           </div>
         </div>
       </div>
@@ -87,6 +87,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 32px;
 
       .wrapper {
         .unit {
@@ -124,17 +125,22 @@
       }
     }
     @media (min-width: 950px) {
-      .intro {
-        display: block;
-        text-align: center;
+      & {
+        .banner {
+          padding: 64px 0 128px 0;
+        }
 
-        .wrapper {
-          display: flex;
-          justify-content: space-around;
+        .intro {
+          display: block;
 
-          .unit {
-            svg {
+          .wrapper {
+            display: flex;
+            justify-content: space-around;
 
+            .unit {
+              svg {
+
+              }
             }
           }
         }
