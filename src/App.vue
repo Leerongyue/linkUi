@@ -18,8 +18,8 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "src/style/reset";
-  @import "src/style/helper";
+  @import "views/style/reset";
+  @import "views/style/helper";
 
   #app {
     position: absolute;

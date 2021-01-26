@@ -2,36 +2,40 @@
   <div class="doc">
     <TopNav/>
     <div class="content">
-      <aside v-if="asideVisible">
-        <h2>文档</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/intro">介绍</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/install">安装</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/start">开始使用</router-link>
-          </li>
-        </ol>
-        <h2>组件列表</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/switch">Switch组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">Button组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">Dialog组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs组件</router-link>
-          </li>
-        </ol>
-      </aside>
-      <div class="pop" v-if="asideVisible" @click="asideVisible=false"></div>
+      <transition name="slide-fade">
+        <aside v-if="asideVisible">
+          <h2>文档</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/intro">介绍</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/install">安装</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/start">开始使用</router-link>
+            </li>
+          </ol>
+          <h2>组件列表</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/switch">Switch组件</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/button">Button组件</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/dialog">Dialog组件</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/tabs">Tabs组件</router-link>
+            </li>
+          </ol>
+        </aside>
+      </transition>
+      <transition name="slide-fade">
+        <div class="pop" v-if="asideVisible" @click="asideVisible=false"></div>
+      </transition>
       <main>
         <router-view/>
       </main>
@@ -40,17 +44,17 @@
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
-  import {inject, Ref} from 'vue';
-  import {router} from '../router';
+  import TopNav from "../components/TopNav.vue";
+  import {inject, Ref} from "vue";
+  import {router} from "../router";
 
   export default {
     components: {
       TopNav
     },
     setup() {
-      const asideVisible = inject<Ref<boolean>>('asideVisible');
-      const width = inject<number>('width');
+      const asideVisible = inject<Ref<boolean>>("asideVisible");
+      const width = inject<number>("width");
       router.afterEach(() => {
         if (width <= 500) {
           asideVisible.value = false;
@@ -62,6 +66,11 @@
 </script>
 
 <style lang="scss" scoped>
+  $bg: rgb(255, 249, 249);
+  .router-link-active {
+    background: darken($bg, 2%);
+  }
+
   .doc {
     display: flex;
     flex-direction: column;
@@ -81,18 +90,29 @@
         background: white;
         box-shadow: 5px 0 10px -5px #d4d4d4;
         z-index: 2;
-        padding-left: 32px;
+        transition: all 1s;
 
         h2 {
+          display: inline-block;
           margin: 16px 0;
+          padding-left: 32px;
         }
 
         ol {
-          padding-left: 12px;
           color: rgb(68, 41, 91);
+          display: flex;
+          flex-direction: column;
 
           li {
-            padding: 8px 0;
+            a {
+              display: inline-block;
+              width: 100%;
+              padding: 8px 0 8px 32px;
+
+              &:hover {
+                background: darken($bg, 2%);
+              }
+            }
           }
         }
 
@@ -110,9 +130,23 @@
         z-index: 1;
         background: #f3f3f3;
         opacity: 0.5;
+
         @media (min-width: 500px) {
           display: none;
         }
+      }
+
+      .slide-fade-enter-active {
+        transition: all .3s ease;
+      }
+
+      .slide-fade-leave-active {
+        transition: all .3s ease;
+      }
+
+      .slide-fade-enter-from,
+      .slide-fade-leave-to {
+        transform: translateX(-100%);
       }
 
       main {

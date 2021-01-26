@@ -1,9 +1,9 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
-import Intro from './components/Intro.vue';
-import Install from './components/Install.vue';
-import Start from './components/Start.vue';
+import Intro from './views/Intro.vue';
+import Install from './views/Install.vue';
+import Start from './views/Start.vue';
 import SwitchDemo from './components/SwitchDemo.vue';
 import ButtonDemo from './components/ButtonDemo.vue';
 import DialogDemo from './components/DialogDemo.vue';

@@ -86,6 +86,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 32px;
 
       .unit {
         display: flex;
@@ -107,13 +108,22 @@
       }
     }
 
-    @media (min-width: 500px) {
+    @media (min-width: 600px) and (max-width: 950px) {
       .intro {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
-        justify-content: space-around;
         padding-top: 24px;
+      }
+    }
+    @media (min-width: 950px) {
+      .banner {
+        padding: 64px 0 128px 0;
+      }
+      .intro {
+        display: flex;
+        flex-direction: row;
       }
     }
   }

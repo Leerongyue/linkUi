@@ -7,19 +7,18 @@
     </router-link>
     <ul>
       <li class="menu">
-        <router-link to="/">菜单1</router-link>
-      </li>
-      <li>
-        <router-link to="/doc">菜单2</router-link>
+        <router-link to="/doc/intro">文档</router-link>
       </li>
     </ul>
     <div class="switch" @click="toggleMenu" v-if="path!=='/home'">
-      <svg class="icon" v-if="!asideVisible">
-        <use xlink:href="#icon-more"></use>
-      </svg>
-      <svg class="icon" v-if="asideVisible">
-        <use xlink:href="#icon-delete"></use>
-      </svg>
+      <transition name="slide-fade" mode="out-in">
+        <svg key="more" class="icon" v-if="!asideVisible">
+          <use xlink:href="#icon-more"></use>
+        </svg>
+        <svg key="delete" class="icon" v-else>
+          <use xlink:href="#icon-delete"></use>
+        </svg>
+      </transition>
     </div>
   </div>
 </template>
@@ -71,7 +70,19 @@
         width: 32px;
         height: 32px;
       }
+    }
 
+    .slide-fade-enter-active {
+      transition: all .3s ease;
+    }
+
+    .slide-fade-leave-active {
+      transition: all .3s ease;
+    }
+
+    .slide-fade-enter-from,
+    .slide-fade-leave-to {
+      transform: rotateX(90deg);
     }
   }
 
