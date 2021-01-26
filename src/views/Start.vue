@@ -1,21 +1,3 @@
 <template>
-  <article class="markdown-body" v-html="start">
-
-  </article>
+  <Markdown path="../markdown/start.md"/>
 </template>
-
-<script>
-  import start from '../markdown/start.md'
-
-  export default {
-    data() {
-      return {
-        start
-      }
-    }
-  };
-</script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -1,18 +1,3 @@
 <template>
-  <article class="markdown-body" v-html="intro"></article>
+  <Markdown path="../markdown/intro.md"/>
 </template>
-
-<script>
-  import intro from '../markdown/intro.md'
-
-  export default {
-    name: "Intro",
-    data() {
-      return {intro}
-    }
-  };
-</script>
-
-<style scoped>
-
-</style>
