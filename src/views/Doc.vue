@@ -78,19 +78,19 @@
 
     .content {
       flex-grow: 1;
-      position: relative;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
       padding: 0 16px;
 
       aside {
-        position: absolute;
+        position: fixed;
         width: 60%;
         height: 100%;
         left: 0;
-        top: 0;
+        top: 55px;
         background: white;
         box-shadow: 5px 0 10px -5px #d4d4d4;
         z-index: 2;
-        transition: all 1s;
 
         h2 {
           display: inline-block;
@@ -118,13 +118,14 @@
 
         @media (min-width: 500px) {
           width: 20%;
+          top: 86px;
         }
       }
 
       .pop {
-        position: absolute;
+        position: fixed;
         left: 0;
-        top: 0;
+        top: 55px;
         height: 100%;
         width: 100%;
         z-index: 1;
@@ -135,6 +136,19 @@
           display: none;
         }
       }
+
+      main {
+        @media (min-width: 500px) {
+          margin-left: 20%;
+        }
+      }
+
+      /*main {*/
+      /*  border: 1px solid red;*/
+      /*  height: 100%;*/
+      /*  overflow: auto;*/
+      /*  -webkit-overflow-scrolling: touch;*/
+      /*}*/
 
       .slide-fade-enter-active {
         transition: all .3s ease;
@@ -148,13 +162,6 @@
       .slide-fade-leave-to {
         transform: translateX(-100%);
       }
-
-      main {
-        @media (min-width: 500px) {
-          margin-left: 20%;
-        }
-      }
     }
   }
-
 </style>

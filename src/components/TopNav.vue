@@ -24,12 +24,12 @@
 </template>
 
 <script lang="ts">
-  import {inject, Ref, onMounted} from 'vue';
-  import {useRoute} from 'vue-router';
+  import {inject, Ref, onMounted} from "vue";
+  import {useRoute} from "vue-router";
 
   export default {
     setup() {
-      const asideVisible = inject<Ref<boolean>>('asideVisible');
+      const asideVisible = inject<Ref<boolean>>("asideVisible");
       const toggleMenu = () => {
         asideVisible.value = !asideVisible.value;
       };
