@@ -1,56 +1,57 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
-import Home from './views/Home.vue';
-import Doc from './views/Doc.vue';
-import Intro from './views/Intro.vue';
-import Install from './views/Install.vue';
-import Start from './views/Start.vue';
-import SwitchDemo from './components/SwitchDemo.vue';
-import ButtonDemo from './components/ButtonDemo.vue';
-import DialogDemo from './components/DialogDemo.vue';
-import TabsDemo from './components/TabsDemo.vue';
+import {createRouter, createWebHashHistory} from "vue-router";
+import Home from "./views/Home.vue";
+import Doc from "./views/Doc.vue";
+import SwitchDemo from "./components/SwitchDemo.vue";
+import ButtonDemo from "./components/ButtonDemo.vue";
+import DialogDemo from "./components/DialogDemo.vue";
+import TabsDemo from "./components/TabsDemo.vue";
+import {h} from "vue";
+import Markdown from "./components/Markdown.vue";
+
+const md = filename => h(Markdown, {path: `../markdown/${filename}.md`, key: filename});
 
 const history = createWebHashHistory();
 export const router = createRouter({
   history: history,
   routes: [
     {
-      path: '/',
-      redirect: '/home'
+      path: "/",
+      redirect: "/home"
     },
     {
-      path: '/home',
+      path: "/home",
       component: Home
     },
     {
-      path: '/doc',
+      path: "/doc",
       component: Doc,
       children: [
         {
-          path: 'intro',
-          component: Intro
+          path: "intro",
+          component: md("intro")
         },
         {
-          path: 'install',
-          component: Install
+          path: "install",
+          component: md("install")
         },
         {
-          path: 'start',
-          component: Start
+          path: "start",
+          component: md("start")
         },
         {
-          path: 'switch',
+          path: "switch",
           component: SwitchDemo
         },
         {
-          path: 'button',
+          path: "button",
           component: ButtonDemo
         },
         {
-          path: 'dialog',
+          path: "dialog",
           component: DialogDemo
         },
         {
-          path: 'tabs',
+          path: "tabs",
           component: TabsDemo
         },
       ]
