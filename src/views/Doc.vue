@@ -66,11 +66,9 @@
 </script>
 
 <style lang="scss" scoped>
-  $bg: rgb(255, 249, 249);
-  .router-link-active {
-    background: darken($bg, 2%);
-  }
+  @import "src/style/helper";
 
+  $bg: rgb(255, 249, 249);
   .doc {
     display: flex;
     flex-direction: column;
@@ -112,6 +110,10 @@
               &:hover {
                 background: darken($bg, 2%);
               }
+
+              &.router-link-active {
+                background: darken($bg, 2%);
+              }
             }
           }
         }
@@ -143,18 +145,7 @@
         }
       }
 
-      .slide-fade-enter-active {
-        transition: all .3s ease;
-      }
-
-      .slide-fade-leave-active {
-        transition: all .3s ease;
-      }
-
-      .slide-fade-enter-from,
-      .slide-fade-leave-to {
-        transform: translateX(-100%);
-      }
+      @extend %transition
     }
   }
 </style>

@@ -5,12 +5,10 @@
       <component :is="component"/>
     </div>
     <div class="demo-actions">
-      <Button>查看代码</Button>
+      <Button @click="toggle">查看代码</Button>
     </div>
-    <div class="demo-code">
-      <pre class="language-html"
-           v-html="Prism.highlight(component.__sourceCode, Prism.languages.html,'html')"
-      />
+    <div class="demo-code" v-if="codeVisible">
+      <pre class="language-html" v-html="html"/>
     </div>
   </div>
 </template>
@@ -19,6 +17,7 @@
   import Button from "../lib/Button.vue";
   import "prismjs";
   import "prismjs/themes/prism.css";
+  import {computed, ref} from "vue";
 
   const Prism = (window as any).Prism;
 
@@ -29,15 +28,27 @@
     components: {
       Button
     },
-    setup() {
+    setup(props) {
+      const html = computed(() => {
+        return Prism.highlight(props.component.__sourceCode, Prism.languages.html, "html");
+      });
+      const codeVisible = ref(false);
+      const toggle = () => {
+        codeVisible.value = !codeVisible.value;
+      };
       return {
-        Prism
+        Prism,
+        html,
+        codeVisible,
+        toggle
       };
     }
   };
 </script>
 
 <style scoped lang="scss">
+  @import "src/style/helper";
+
   $border-color: #d9d9d9;
   .demo {
     border: 1px solid $border-color;
@@ -61,6 +72,7 @@
     &-code {
       padding: 8px 16px;
       border-top: 1px dashed $border-color;
+      transition: all 0.3s ease;
 
       > pre {
         line-height: 1.1;
@@ -68,5 +80,7 @@
         margin: 0;
       }
     }
+
+    @extend %transition
   }
 </style>
