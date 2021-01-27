@@ -143,13 +143,6 @@
         }
       }
 
-      /*main {*/
-      /*  border: 1px solid red;*/
-      /*  height: 100%;*/
-      /*  overflow: auto;*/
-      /*  -webkit-overflow-scrolling: touch;*/
-      /*}*/
-
       .slide-fade-enter-active {
         transition: all .3s ease;
       }
