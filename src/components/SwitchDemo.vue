@@ -7,16 +7,13 @@
 <script lang="ts">
   import Switch1Demo from "./Switch1.demo.vue";
   import Switch2Demo from "./Switch2.demo.vue";
-  import {ref} from "vue";
   import Demo from "./Demo.vue";
 
   export default {
     name: "SwitchDemo",
     components: {Demo},
     setup() {
-      const bool = ref(false);
       return {
-        bool,
         Switch1Demo,
         Switch2Demo,
       };
