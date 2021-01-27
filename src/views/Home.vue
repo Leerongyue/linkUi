@@ -34,7 +34,7 @@
         </svg>
         <div class="text">
           <h2>代码易读</h2>
-          <span>给个组件的代码都及其简洁</span>
+          <span>给个组件的代码都极其简洁</span>
         </div>
       </div>
     </div>
