@@ -4,7 +4,7 @@
     <div class="content">
       <transition name="slide-fade">
         <aside v-if="asideVisible">
-          <h2>文档</h2>
+          <h2>快速上手</h2>
           <ol>
             <li>
               <router-link to="/doc/intro">介绍</router-link>
@@ -105,7 +105,7 @@
             a {
               display: inline-block;
               width: 100%;
-              padding: 8px 0 8px 32px;
+              padding: 8px 0 8px 40px;
 
               &:hover {
                 background: darken($bg, 2%);
@@ -131,7 +131,6 @@
         height: 100%;
         width: 100%;
         z-index: 1;
-        background: #f3f3f3;
         opacity: 0.5;
 
         @media (min-width: 500px) {
@@ -140,8 +139,14 @@
       }
 
       main {
+        margin: 40px 10px 20px 10px;
+
+        br {
+          color: red;
+        }
+
         @media (min-width: 500px) {
-          margin-left: 20%;
+          margin-left: 23%;
         }
       }
 

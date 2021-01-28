@@ -5,7 +5,7 @@
       <h1>轱辘UI</h1>
       <h2>基于Vue3.0的UI框架</h2>
       <div>
-        <a href="https://baidu.com">Github</a>
+        <a href="https://baidu.com">GITHUB</a>
         <router-link to="/doc/intro">开始</router-link>
       </div>
     </div>
@@ -60,7 +60,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 32px 0 64px 0;
+      padding: 64px 0 72px 0;
       clip-path: ellipse(80% 70% at 50% 20%);
       background: linear-gradient(
           145deg,
@@ -76,8 +76,12 @@
           background: rgb(99, 111, 164);
           margin: 0 8px;
           border-radius: 16px;
-          padding: 4px 12px;
+          padding: 8px 16px;
         }
+      }
+
+      h2 {
+        margin: 8px 0;
       }
     }
 
