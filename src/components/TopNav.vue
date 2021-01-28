@@ -40,6 +40,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "src/style/helper";
+
   .topnav {
     display: flex;
     justify-content: space-between;

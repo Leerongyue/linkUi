@@ -27,7 +27,7 @@
       component: Object
     },
     components: {
-      Button
+      Button,
     },
     setup(props) {
       const html = computed(() => {
@@ -54,15 +54,21 @@
 <style scoped lang="scss">
   @import "src/style/helper";
 
-  $border-color: #d9d9d9;
+  $radius: 4px;
   .demo {
-    border: 1px solid $border-color;
+    border: 1px solid;
+    border-radius: $radius;
     margin: 16px 0 32px;
+
+    @media (min-width: 500px) {
+      display: inline-block;
+      min-width: 450px;
+    }
 
     > h2 {
       font-size: 20px;
       padding: 8px 16px;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid;
     }
 
     &-component {
@@ -71,13 +77,12 @@
 
     &-actions {
       padding: 8px 16px;
-      border-top: 1px dashed $border-color;
     }
 
     &-code {
-      padding: 8px 16px;
-      border-top: 1px dashed $border-color;
-      transition: all 0.3s ease;
+      padding: 8px 0;
+      border-top: 1px dashed;
+      transition: all 0.5s ease;
 
       > pre {
         line-height: 1.1;
@@ -85,7 +90,5 @@
         margin: 0;
       }
     }
-
-    @extend %transition
   }
 </style>
