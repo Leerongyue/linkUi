@@ -1,6 +1,8 @@
 <template>
   <div class="demo">
-    <h2>{{component.__sourceCodeTitle}}</h2>
+    <h2>
+      {{component.__sourceCodeTitle}}
+    </h2>
     <div class="demo-component">
       <component :is="component"/>
     </div>
@@ -24,7 +26,8 @@
 
   export default {
     props: {
-      component: Object
+      component: Object,
+      description: HTMLElement
     },
     components: {
       Button,
@@ -54,6 +57,7 @@
 <style scoped lang="scss">
   @import "src/style/helper";
 
+  $color: rgb(255, 31, 31);
   $radius: 4px;
   .demo {
     border: 1px solid;
@@ -61,8 +65,8 @@
     margin: 16px 0 32px;
 
     @media (min-width: 500px) {
-      display: inline-block;
-      min-width: 450px;
+      display: block;
+      max-width: 450px;
     }
 
     > h2 {
@@ -71,8 +75,31 @@
       border-bottom: 1px solid;
     }
 
+    > h3 {
+      margin: 16px 0 8px 0;
+
+      span {
+        color: $color;
+      }
+    }
+
+    > p {
+      span {
+        color: $color;
+      }
+    }
+
     &-component {
-      padding: 16px;
+      padding: 0 0 16px 16px;
+
+      ::v-deep h4 {
+        padding: 16px 0;
+
+        span {
+          color: $color;
+          font-weight: bold;
+        }
+      }
     }
 
     &-actions {
