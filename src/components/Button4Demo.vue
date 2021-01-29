@@ -1,10 +1,10 @@
 <demo>
-  支持 disabled
+  disabled:boolean
 </demo>
 <template>
-  <Button disabled>禁用按钮</Button>
-  <Button theme="link" disabled>禁用链接按钮</Button>
-  <Button theme="text" disabled>禁用按钮</Button>
+  <Button disabled theme="button">禁用按钮</Button>
+  <Button disabled theme="button" round loading>禁用按钮</Button>
+  <Button disabled theme="button" level="danger" round>禁用按钮</Button>
 </template>
 
 <script lang="ts">

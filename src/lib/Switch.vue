@@ -14,7 +14,7 @@
     },
     setup(props, context) {
       const toggle = () => {
-        context.emit('update:value', !props.value);
+        context.emit("update:value", !props.value);
       };
       return {toggle};
     }
@@ -31,6 +31,7 @@
     background: rgb(191, 191, 191);
     border-radius: $h/2;
     position: relative;
+    margin-top: 16px;
 
     span {
       position: absolute;

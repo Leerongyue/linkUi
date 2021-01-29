@@ -1,10 +1,10 @@
 <demo>
-  常规使用
+  theme:'normal / 'link' / 'text'
 </demo>
 <template>
-  <Button>你好</Button>
-  <Button theme="link">你好</Button>
-  <Button theme="text">你好</Button>
+  <Button>普通</Button>
+  <Button theme="link">链接</Button>
+  <Button theme="text">文字</Button>
 </template>
 
 <script lang="ts">

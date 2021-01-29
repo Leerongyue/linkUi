@@ -6,21 +6,21 @@
 </template>
 
 <script lang="ts">
-  import {computed} from 'vue';
+  import {computed} from "vue";
 
   export default {
     props: {
       theme: {
         type: String,
-        default: 'button'
+        default: "button"
       },
       size: {
         type: String,
-        default: 'normal'
+        default: "normal"
       },
       level: {
         type: String,
-        default: 'normal'
+        default: "normal"
       },
       disabled: {
         type: Boolean,
@@ -29,15 +29,20 @@
       loading: {
         type: Boolean,
         default: false
+      },
+      round: {
+        type: Boolean,
+        default: false
       }
     },
     setup(props) {
-      const {theme, size, level, loading} = props;
+      const {theme, size, level, round} = props;
       const classes = computed(() => {
         return {
           [`link-theme-${theme}`]: theme,
           [`link-size-${size}`]: size,
           [`link-level-${level}`]: level,
+          [`link-button-round`]: round,
         };
       });
       return {classes};
@@ -50,12 +55,14 @@
   $border-color: #d9d9d9;
   $color: #333;
   $blue: #40a9ff;
+  $green: rgb(19, 206, 102);
+  $yellow: rgb(255, 193, 7);
   $radius: 4px;
   $red: red;
   $grey: grey;
 
   .link-button {
-    padding: 0 12px;
+    padding: 3px 20px;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
@@ -66,10 +73,9 @@
     border: 1px solid $border-color;
     border-radius: $radius;
     box-shadow: 0 1px 0 fade-out(black, 0.95);
-
-    & + & {
-      margin-left: 8px;
-    }
+    transition: all 500ms;
+    margin-right: 8px;
+    margin-top: 16px;
 
     &:hover, &:focus {
       color: $blue;
@@ -118,11 +124,20 @@
     }
 
     &.link-theme-button {
+      &.link-button-round {
+        border-radius: 24px;
+        color: black;
+      }
 
       &.link-level-main {
         background: $blue;
         color: white;
         border-color: $blue;
+
+        &.link-button-round {
+          border-radius: 24px;
+          color: white;
+        }
 
         &:hover,
         &:focus {
@@ -131,10 +146,49 @@
         }
       }
 
+      &.link-level-success {
+        background: $green;
+        color: white;
+        border-color: $green;
+
+        &.link-button-round {
+          border-radius: 24px;
+          color: white;
+        }
+
+        &:hover,
+        &:focus {
+          background: darken($green, 10%);
+          border-color: darken($green, 10%);
+        }
+      }
+
+      &.link-level-warning {
+        background: $yellow;
+        color: white;
+        border-color: $yellow;
+
+        &.link-button-round {
+          border-radius: 24px;
+          color: white;
+        }
+
+        &:hover,
+        &:focus {
+          background: darken($yellow, 10%);
+          border-color: darken($yellow, 10%);
+        }
+      }
+
       &.link-level-danger {
         background: $red;
         border-color: $red;
         color: white;
+
+        &.link-button-round {
+          border-radius: 24px;
+          color: white;
+        }
 
         &:hover,
         &:focus {
@@ -153,7 +207,26 @@
           color: darken($red, 10%);
         }
       }
+
+      &.link-level-success {
+        color: $green;
+
+        &:hover,
+        &:focus {
+          color: darken($green, 10%);
+        }
+      }
+
+      &.link-level-warning {
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          color: darken($yellow, 10%);
+        }
+      }
     }
+
 
     &.link-theme-text {
       &.link-level-main {
@@ -173,10 +246,32 @@
           color: darken($red, 10%);
         }
       }
+
+      &.link-level-success {
+        color: $green;
+
+        &:hover,
+        &:focus {
+          color: darken($green, 10%);
+        }
+      }
+
+      &.link-level-warning {
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          color: darken($yellow, 10%);
+        }
+      }
     }
 
     &.link-theme-button {
       &[disabled] {
+        &:hover {
+          transform: none;
+        }
+
         cursor: not-allowed;
         color: $grey;
 
@@ -188,6 +283,10 @@
 
     &.link-theme-link, &.link-theme-text {
       &[disabled] {
+        &:hover {
+          transform: none;
+        }
+
         cursor: not-allowed;
         color: $grey;
       }
@@ -203,6 +302,12 @@
       border-style: solid;
       border-width: 2px;
       animation: link-spin 1s infinite linear;
+    }
+
+    &:hover {
+      @media (min-width: 500px) {
+        transform: translateY(-4px);
+      }
     }
   }
 

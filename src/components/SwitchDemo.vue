@@ -1,8 +1,21 @@
 <template>
-  <h1>Switch组件示例</h1>
-  <Demo :component="Switch1Demo"
-        description="<div>使用<span>v-model</span>绑定一个<span>Boolean</span>类型的变量</div>"/>
-  <Demo :component="Switch2Demo"/>
+  <div class="link-section-wrapper">
+    <h1>Switch组件示例</h1>
+    <div class="link-section-component">
+      <h3><span>#</span> 基础用法</h3>
+      <h4>
+        使用<span>v-model</span>绑定一个<span>Boolean</span>类型的变量
+      </h4>
+      <Demo :component="Switch1Demo"/>
+    </div>
+    <div>
+      <h3><span>#</span> 支持disabled</h3>
+      <h4>
+        添加<span>disabled</span>属性来<span>禁用Switch组件</span>
+      </h4>
+      <Demo :component="Switch2Demo"/>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -21,3 +34,24 @@
     }
   };
 </script>
+<style lang="scss" scoped>
+  .link-section-wrapper {
+    .link-section-component {
+      h3 {
+        padding: 8px 0;
+
+        span {
+          color: red;
+          font-weight: bold;
+        }
+      }
+
+      h4 {
+        span {
+          font-weight: bold;
+          color: red;
+        }
+      }
+    }
+  }
+</style>

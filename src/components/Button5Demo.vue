@@ -1,11 +1,9 @@
 <demo>
-  支持显示加载中
+  loading:boolean
 </demo>
 <template>
-  <div>
-    <Button loading>加载中</Button>
-    <Button>加载完毕</Button>
-  </div>
+  <Button loading>加载中</Button>
+  <Button loading round>加载中</Button>
 </template>
 <script lang="ts">
   import Button from "../lib/Button.vue";

@@ -1,8 +1,10 @@
 <template>
   <div class="demo">
-    <h2>
-      {{component.__sourceCodeTitle}}
-    </h2>
+    <h3>
+      <span>
+         {{component.__sourceCodeTitle}}
+      </span>
+    </h3>
     <div class="demo-component">
       <component :is="component"/>
     </div>
@@ -27,7 +29,6 @@
   export default {
     props: {
       component: Object,
-      description: HTMLElement
     },
     components: {
       Button,
@@ -66,19 +67,25 @@
 
     @media (min-width: 500px) {
       display: block;
-      max-width: 450px;
-    }
-
-    > h2 {
-      font-size: 20px;
-      padding: 8px 16px;
-      border-bottom: 1px solid;
+      max-width: 500px;
     }
 
     > h3 {
-      margin: 16px 0 8px 0;
+      font-size: 20px;
+      padding: 8px 16px;
+      border-bottom: 1px solid;
 
       span {
+        color: rgb(69, 100, 110);
+        font-weight: bold;
+      }
+    }
+
+    > h4 {
+      margin: 16px;
+
+      ::v-deep span {
+        font-weight: bold;
         color: $color;
       }
     }
@@ -90,20 +97,19 @@
     }
 
     &-component {
-      padding: 0 0 16px 16px;
-
-      ::v-deep h4 {
-        padding: 16px 0;
-
-        span {
-          color: $color;
-          font-weight: bold;
-        }
-      }
+      padding-left: 16px;
     }
 
     &-actions {
-      padding: 8px 16px;
+      padding: 16px;
+
+      .link-button {
+        margin-top: 0;
+
+        &:hover {
+          transform: none;
+        }
+      }
     }
 
     &-code {
