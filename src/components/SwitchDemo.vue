@@ -8,7 +8,7 @@
       </h4>
       <Demo :component="Switch1Demo"/>
     </div>
-    <div>
+    <div class="link-section-component">
       <h3><span>#</span> 支持disabled</h3>
       <h4>
         添加<span>disabled</span>属性来<span>禁用Switch组件</span>
