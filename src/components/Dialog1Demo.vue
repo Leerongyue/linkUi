@@ -1,10 +1,10 @@
 <demo>
-  常规使用
+  yourVisible:boolean
 </demo>
 <template>
   <div>
-    <Button @click="toggle">toggle</Button>
-    <Dialog v-model:visible="x" :ok="f1" :cancel="f2">
+    <Button level="main" @click="toggle">点击打开</Button>
+    <Dialog v-model:visible="showDialog" :ok="f1" :cancel="f2">
       <template v-slot:title>
         <strong>加粗的标题</strong>
       </template>
@@ -26,15 +26,15 @@
       Button, Dialog
     },
     setup() {
-      const x = ref(false);
+      const showDialog = ref(false);
       const toggle = () => {
-        x.value = !x.value;
+        showDialog.value = !showDialog.value;
       };
       const f1 = () => {
         return false;
       };
       const f2 = () => {};
-      return {x, toggle, f1, f2};
+      return {showDialog, toggle, f1, f2};
     }
   };
 </script>

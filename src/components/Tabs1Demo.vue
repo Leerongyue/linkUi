@@ -1,10 +1,11 @@
 <demo>
-  常规使用
+  yourSelected:boolean
 </demo>
 <template>
-  <Tabs v-model:selected="x">
+  <Tabs v-model:selected="defaultTab">
     <Tab title="导航1">内容1</Tab>
     <Tab title="导航2">内容2</Tab>
+    <Tab title="导航3">内容3</Tab>
   </Tabs>
 </template>
 
@@ -18,8 +19,8 @@
       Tab, Tabs
     },
     setup() {
-      const x = ref("导航1");
-      return {x};
+      const defaultTab = ref("导航1");
+      return {defaultTab};
     }
   };
 </script>

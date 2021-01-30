@@ -86,8 +86,8 @@
     &-nav {
       display: flex;
       color: $color;
-      border-bottom: 1px solid $border-color;
       position: relative;
+      margin: 16px 0;
 
       &-item {
         margin: 0 16px;

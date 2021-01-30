@@ -1,9 +1,9 @@
 <demo>
-  一键打开 Dialog
+  一键打开Dialog
 </demo>
 <template>
   <div>
-    <Button @click="showDialog">show</Button>
+    <Button @click="showDialog">一键打开</Button>
   </div>
 </template>
 
