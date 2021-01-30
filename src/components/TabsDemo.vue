@@ -27,23 +27,5 @@
   };
 </script>
 <style lang="scss" scoped>
-  .link-section-wrapper {
-    .link-section-component {
-      h3 {
-        padding: 8px 0;
-
-        span {
-          color: red;
-          font-weight: bold;
-        }
-      }
-
-      h4 {
-        span {
-          font-weight: bold;
-          color: red;
-        }
-      }
-    }
-  }
+  @import "src/style/componentDemo";
 </style>
