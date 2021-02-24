@@ -1,5 +1,5 @@
 <demo>
-  yourBool:boolean
+  bool:boolean
 </demo>
 <template>
   <Switch v-model:value="bool"/>

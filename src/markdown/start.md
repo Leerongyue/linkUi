@@ -31,7 +31,6 @@
         Button,
         Switch,
         Dialog,
-        TabBox,
         Tabs,
     } from 'link-ui'
 

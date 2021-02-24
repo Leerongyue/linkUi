@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts">
-  import Button from "../lib/Button.vue";
-  import "prismjs";
-  import "prismjs/themes/prism.css";
-  import {computed, ref} from "vue";
+  import Button from '../lib/Button.vue';
+  import 'prismjs';
+  import '../../node_modules/prismjs/themes/prism.css';
+  import {computed, ref} from 'vue';
 
   const Prism = (window as any).Prism;
 
@@ -35,7 +35,7 @@
     },
     setup(props) {
       const html = computed(() => {
-        return Prism.highlight(props.component.__sourceCode, Prism.languages.html, "html");
+        return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html');
       });
       const codeVisible = ref(false);
       const showCode = () => {
@@ -45,7 +45,6 @@
         codeVisible.value = false;
       };
       return {
-        Prism,
         html,
         codeVisible,
         showCode,

@@ -1,5 +1,5 @@
 <demo>
-  yourVisible:boolean
+  showDialog:boolean
 </demo>
 <template>
   <div>
@@ -38,7 +38,3 @@
     }
   };
 </script>
-
-<style scoped>
-
-</style>

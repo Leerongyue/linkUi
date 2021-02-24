@@ -2,12 +2,12 @@
 
 <br>
 
-欢迎使用 linkUI
+欢迎使用 `linkUI`
 <br>
 
-## #介绍
+## 介绍
 
-linkUI 是一个简洁的前端 UI 框架,基于 vue3.0 的开源 UI 组件库, 使用`vite` `vue3.0` `typescript`搭建,如果你不满框架原生样式, 不必担心类名命名的问题，覆盖样式也是可以的, 同时 linkUI 还支持`移动端`显示
+基于 `vue3.0` 的简洁开源 UI 组件库, 使用`vite` `vue3.0` `typescript`搭建,支持`移动端`显示
 <br>
 <br>
 
@@ -27,4 +27,4 @@ linkUI 是一个简洁的前端 UI 框架,基于 vue3.0 的开源 UI 组件库, 
 
 <br>
 
-上一节:[安装](#/doc/install)
+下一节:[安装](#/doc/install)
