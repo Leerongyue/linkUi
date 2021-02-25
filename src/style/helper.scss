@@ -4,6 +4,17 @@ $font-kai: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL
 $lineColor: rgb(240, 240, 240);
 $blockBlue: rgb(33, 174, 246);
 $blockGreen: rgb(57, 195, 182);
+$link-color: #7aff22;
+$color: rgb(4, 103, 122);
+$title-color: rgb(77, 60, 255);
+$color-light: rgba(4, 103, 122, 0.2);
+$linear-gradient: linear-gradient(145deg, rgba(211, 249, 246, 1) 0%, rgba(136, 204, 218, 1) 100%);
+$highlight: #108ee9;
+$mobile-width: 500px;
+$narrow-width: 700px;
+$td-type-color: #c41d7f;
+$line-light-color: #d9d9d9;
+$dark-color: #bfbfbf;
 %transition {
   .slide-fade-enter-active {
     transition: all .3s ease;
