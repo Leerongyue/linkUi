@@ -18,23 +18,8 @@
           </ol>
           <h2>组件列表</h2>
           <ol>
-            <li>
-              <router-link to="/doc/switch">Switch组件</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/button">Button组件</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/dialog">Dialog组件</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/tabs">Tabs组件</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/icon">Icon组件</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/input">Input组件</router-link>
+            <li v-for="item in routerArr" :key="item.to">
+              <router-link :to="item.to">{{item.text}}</router-link>
             </li>
           </ol>
         </aside>
@@ -42,7 +27,7 @@
       <transition name="slide-fade">
         <div class="pop" v-if="asideVisible" @click="asideVisible=false"></div>
       </transition>
-      <main>
+      <main id="scrollContainer">
         <router-view/>
       </main>
     </div>
@@ -50,23 +35,32 @@
 </template>
 
 <script lang="ts">
-  import TopNav from "../components/TopNav.vue";
-  import {inject, Ref} from "vue";
-  import {router} from "../router";
+  import TopNav from '../components/TopNav.vue';
+  import {inject, Ref} from 'vue';
+  import {router} from '../router';
 
   export default {
     components: {
       TopNav
     },
     setup() {
-      const asideVisible = inject<Ref<boolean>>("asideVisible");
-      const width = inject<number>("width");
+      const asideVisible = inject<Ref<boolean>>('asideVisible');
+      const routerArr = [
+        {to: '/doc/switch', text: 'Switch组件'},
+        {to: '/doc/button', text: 'Button组件'},
+        {to: '/doc/dialog', text: 'Dialog组件'},
+        {to: '/doc/tabs', text: 'Tabs组件'},
+        {to: '/doc/icon', text: 'Icon组件'},
+        {to: '/doc/input', text: 'Input组件'},
+        {to: '/doc/backToTop', text: 'BackToTop组件'},
+      ];
+      const width = inject<number>('width');
       router.afterEach(() => {
         if (width <= 500) {
           asideVisible.value = false;
         }
       });
-      return {asideVisible};
+      return {asideVisible, routerArr};
     },
   };
 </script>

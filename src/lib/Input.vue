@@ -1,7 +1,7 @@
 <template>
-  <div class="m-input" :class="{'m-disabled':disabled}">
+  <div class="link-input" :class="{'link-disabled':disabled}">
     <input
-      :class="{'m-input-round':round ,'m-input-focused': focused,'m-input-disabled': disabled}"
+      :class="{'link-input-round':round ,'link-input-focused': focused,'link-input-disabled': disabled}"
       v-bind="$attrs"
       @change="onchange"
       @input="oninput"
@@ -13,9 +13,9 @@
 </template>
 
 <script lang="ts">
-  import {SetupContext} from "vue";
-  import {ref} from "vue";
-  import Dialog from "./Dialog.vue";
+  import {SetupContext} from 'vue';
+  import {ref} from 'vue';
+  import Dialog from './Dialog.vue';
 
   export default {
     components: {Dialog},
@@ -27,15 +27,15 @@
     setup(props, context: SetupContext<any>) {
       const focused = ref(false);
       const oninput = (e: KeyboardEvent) => {
-        context.emit("update:value", (e.target as HTMLInputElement).value);
+        context.emit('update:value', (e.target as HTMLInputElement).value);
       };
       const showShadow = () => {
         focused.value = true;
-        context.emit("focus");
+        context.emit('focus');
       };
       const hideShadow = () => {
         focused.value = false;
-        context.emit("blur");
+        context.emit('blur');
       };
       return {oninput, focused, showShadow, hideShadow, onchange};
     },
@@ -45,7 +45,7 @@
 <style lang="scss" scoped>
   @import "src/style/helper";
 
-  .m-input {
+  .link-input {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     position: relative;
@@ -54,7 +54,7 @@
     align-items: center;
     margin-top: 1em;
 
-    &.m-disabled {
+    &.link-disabled {
       * {
         cursor: not-allowed;
       }
@@ -77,20 +77,20 @@
         border-color: $highlight;
       }
 
-      &.m-input-disabled {
+      &.link-input-disabled {
         &:hover {
           border-color: rgb(212, 212, 212)
         }
       }
 
-      &.m-input-focused {
+      &.link-input-focused {
         border-color: $highlight;
         -webkit-box-shadow: 0 0 3px $highlight;
         box-shadow: 0 0 3px $highlight;
       }
 
 
-      &.m-input-round {
+      &.link-input-round {
         border-radius: 16px;
       }
 

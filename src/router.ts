@@ -1,17 +1,18 @@
-import {createRouter, createWebHashHistory} from "vue-router";
-import Home from "./views/Home.vue";
-import Doc from "./views/Doc.vue";
-import SwitchDemo from "./components/SwitchDemo.vue";
-import ButtonDemo from "./components/ButtonDemo.vue";
-import DialogDemo from "./components/DialogDemo.vue";
-import TabsDemo from "./components/TabsDemo.vue";
-import {h} from "vue";
-import Markdown from "./components/Markdown.vue";
-import install from "./markdown/install.md";
-import intro from "./markdown/intro.md";
-import start from "./markdown/start.md";
-import IconDemo from "./components/IconDemo.vue";
-import InputDemo from "./components/InputDemo.vue";
+import {createRouter, createWebHashHistory} from 'vue-router';
+import Home from './views/Home.vue';
+import Doc from './views/Doc.vue';
+import SwitchDemo from './components/SwitchDemo.vue';
+import ButtonDemo from './components/ButtonDemo.vue';
+import DialogDemo from './components/DialogDemo.vue';
+import TabsDemo from './components/TabsDemo.vue';
+import {h} from 'vue';
+import Markdown from './components/Markdown.vue';
+import install from './markdown/install.md';
+import intro from './markdown/intro.md';
+import start from './markdown/start.md';
+import IconDemo from './components/IconDemo.vue';
+import InputDemo from './components/InputDemo.vue';
+import BackToTopDemo from './components/BackToTopDemo.vue';
 
 
 const md = string => h(Markdown, {content: string, key: string});
@@ -21,52 +22,56 @@ export const router = createRouter({
   history: history,
   routes: [
     {
-      path: "/",
-      redirect: "/home"
+      path: '/',
+      redirect: '/home'
     },
     {
-      path: "/home",
+      path: '/home',
       component: Home
     },
     {
-      path: "/doc",
+      path: '/doc',
       component: Doc,
       children: [
         {
-          path: "intro",
+          path: 'intro',
           component: md(intro)
         },
         {
-          path: "install",
+          path: 'install',
           component: md(install)
         },
         {
-          path: "start",
+          path: 'start',
           component: md(start)
         },
         {
-          path: "switch",
+          path: 'switch',
           component: SwitchDemo
         },
         {
-          path: "button",
+          path: 'button',
           component: ButtonDemo
         },
         {
-          path: "dialog",
+          path: 'dialog',
           component: DialogDemo
         },
         {
-          path: "tabs",
+          path: 'tabs',
           component: TabsDemo
         },
         {
-          path: "icon",
+          path: 'icon',
           component: IconDemo
         },
         {
-          path: "input",
+          path: 'input',
           component: InputDemo
+        },
+        {
+          path: 'backToTop',
+          component: BackToTopDemo
         },
       ]
     }
