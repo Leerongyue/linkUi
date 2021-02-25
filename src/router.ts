@@ -10,6 +10,7 @@ import Markdown from "./components/Markdown.vue";
 import install from "./markdown/install.md";
 import intro from "./markdown/intro.md";
 import start from "./markdown/start.md";
+import IconDemo from "./components/IconDemo.vue";
 
 
 const md = string => h(Markdown, {content: string, key: string});
@@ -57,6 +58,10 @@ export const router = createRouter({
         {
           path: "tabs",
           component: TabsDemo
+        },
+        {
+          path: "icon",
+          component: IconDemo
         },
       ]
     }

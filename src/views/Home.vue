@@ -2,7 +2,7 @@
   <div class="home">
     <TopNav/>
     <div class="banner">
-      <h1>轱辘UI</h1>
+      <h1>linkUI</h1>
       <h2>基于Vue3.0的UI框架</h2>
       <div>
         <a href="https://baidu.com">GITHUB</a>

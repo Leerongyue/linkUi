@@ -30,6 +30,9 @@
             <li>
               <router-link to="/doc/tabs">Tabs组件</router-link>
             </li>
+            <li>
+              <router-link to="/doc/icon">Icon组件</router-link>
+            </li>
           </ol>
         </aside>
       </transition>
@@ -163,7 +166,7 @@
         }
 
         @media (min-width: 500px) {
-          margin-left: 23%;
+          margin-left: 23vw;
         }
       }
 
