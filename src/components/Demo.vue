@@ -12,17 +12,18 @@
       <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
       <Button @click="showCode" v-else>查看代码</Button>
     </div>
-    <div class="demo-code" v-if="codeVisible">
+    <div :class="'demo-code' + [codeVisible ? ' code-show ' : ' code-hidden ']">
       <pre class="language-html" v-html="html"/>
     </div>
+
   </div>
 </template>
 
 <script lang="ts">
-  import Button from '../lib/Button.vue';
-  import 'prismjs';
-  import '../../node_modules/prismjs/themes/prism.css';
-  import {computed, ref} from 'vue';
+  import Button from "../lib/Button.vue";
+  import "prismjs";
+  import "../../node_modules/prismjs/themes/prism.css";
+  import {computed, ref} from "vue";
 
   const Prism = (window as any).Prism;
 
@@ -35,7 +36,7 @@
     },
     setup(props) {
       const html = computed(() => {
-        return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html');
+        return Prism.highlight(props.component.__sourceCode, Prism.languages.html, "html");
       });
       const codeVisible = ref(false);
       const showCode = () => {
@@ -114,13 +115,25 @@
     &-code {
       padding: 8px 0;
       border-top: 1px dashed;
-      transition: all 0.5s ease;
+      overflow: auto;
 
       > pre {
         line-height: 1.1;
         font-family: Consolas, 'Courier New', Courier, monospace;
         margin: 0;
       }
+    }
+
+    .code-hidden {
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.39, 0.7, 0.18, 0.9);
+      max-height: 0;
+      border: none;
+    }
+
+    .code-show {
+      max-height: 800px;
+      transition: all 1s cubic-bezier(0.39, 0.7, 0.18, 0.9);
     }
   }
 </style>

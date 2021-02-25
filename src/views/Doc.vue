@@ -68,6 +68,7 @@
 <style lang="scss" scoped>
   @import "src/style/helper";
 
+  $deepbgc: #c67085;
   $bg: rgb(255, 249, 249);
   .doc {
     display: flex;
@@ -113,6 +114,22 @@
 
               &.router-link-active {
                 background: darken($bg, 2%);
+                border-right: 3px solid $deepbgc;
+                position: relative;
+                @media (min-width: 500px) {
+                  border-right: none;
+                  &::after {
+                    content: "";
+                    display: block;
+                    animation: bdrolate 0.8s;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 3px;
+                    height: 40px;
+                    background-color: $deepbgc;
+                  }
+                }
               }
             }
           }
@@ -151,6 +168,15 @@
       }
 
       @extend %transition
+    }
+
+    @keyframes bdrolate {
+      0% {
+        transform: rotateX(90deg);
+      }
+      100% {
+        transform: rotateX(0deg);
+      }
     }
   }
 </style>
