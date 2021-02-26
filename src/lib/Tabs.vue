@@ -119,7 +119,7 @@
         background: $blue;
         left: 0;
         bottom: -1px;
-        width: 0px;
+        width: 0;
         transition: all 250ms ease;
       }
     }

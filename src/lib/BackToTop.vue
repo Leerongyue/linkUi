@@ -8,6 +8,7 @@
   import './icon.js';
   import Icon from './Icon.vue';
   import {onMounted, ref} from 'vue';
+  import {watchEffect} from 'vue';
 
   export default {
     components: {
@@ -36,11 +37,12 @@
         }, 8);
       };
       onMounted(() => {
-        const scrollTarget = props.target();
-        scrollTarget.onscroll = (e) => {
-          console.log(e);
-          visibility.value = e.currentTarget.scrollTop >= props.visibilityHeight;
-        };
+        watchEffect(() => {
+          const scrollTarget = props.target();
+          scrollTarget.onscroll = (e) => {
+            visibility.value = e.currentTarget.scrollTop >= props.visibilityHeight;
+          };
+        }, {flush: 'post'});
       });
       return {visibility, backTop, clickHandler};
     },
@@ -62,7 +64,5 @@
         fill: #272727;
       }
     }
-
-
   }
 </style>

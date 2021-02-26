@@ -1,11 +1,10 @@
 <template>
   <div class="home">
-    <TopNav/>
     <div class="banner">
-      <h1>linkUI</h1>
+      <h1>LinkUI</h1>
       <h2>基于Vue3.0的UI框架</h2>
       <div>
-        <a href="https://baidu.com">GITHUB</a>
+        <a href="https://github.com/Leerongyue/linkUi">GITHUB</a>
         <router-link to="/doc/intro">开始</router-link>
       </div>
     </div>
@@ -42,7 +41,7 @@
 </template>
 
 <script lang="ts">
-  import TopNav from "../components/TopNav.vue";
+  import TopNav from '../components/TopNav.vue';
 
   export default {
     components: {
@@ -61,7 +60,6 @@
       flex-direction: column;
       align-items: center;
       padding: 64px 0 72px 0;
-      clip-path: ellipse(80% 70% at 50% 20%);
       background: linear-gradient(
           145deg,
           #e8cbc0,

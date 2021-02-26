@@ -1,9 +1,7 @@
 <template>
   <div class="topnav">
     <router-link to="/home">
-      <svg class="icon">
-        <use xlink:href="#icon-apple"></use>
-      </svg>
+      <Icon name="icon-topLogo"/>
     </router-link>
     <ul>
       <li class="menu">
@@ -24,12 +22,14 @@
 </template>
 
 <script lang="ts">
-  import {inject, Ref, onMounted} from "vue";
-  import {useRoute} from "vue-router";
+  import {inject, Ref, onMounted} from 'vue';
+  import {useRoute} from 'vue-router';
+  import Icon from '../lib/Icon.vue';
 
   export default {
+    components: {Icon},
     setup() {
-      const asideVisible = inject<Ref<boolean>>("asideVisible");
+      const asideVisible = inject<Ref<boolean>>('asideVisible');
       const toggleMenu = () => {
         asideVisible.value = !asideVisible.value;
       };

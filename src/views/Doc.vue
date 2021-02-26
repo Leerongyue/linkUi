@@ -1,6 +1,8 @@
 <template>
   <div class="doc">
-    <TopNav/>
+    <div>
+      <TopNav/>
+    </div>
     <div class="content">
       <transition name="slide-fade">
         <aside v-if="asideVisible">
