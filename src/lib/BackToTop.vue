@@ -1,6 +1,6 @@
 <template>
-  <div class="m-back-top" v-show="visibility" ref="backTop" @click.stop="clickHandler">
-    <Icon name="icon-toTop"/>
+  <div class="link-back-top" v-show="visibility" ref="backTop" @click.stop="clickHandler">
+    <Icon name="icon-top"/>
   </div>
 </template>
 
@@ -8,7 +8,6 @@
   import './icon.js';
   import Icon from './Icon.vue';
   import {onMounted, ref} from 'vue';
-  import {watchEffect} from 'vue';
 
   export default {
     components: {
@@ -16,7 +15,7 @@
     },
     props: {
       target: {default: () => document || window},
-      visibilityHeight: {default: 100},
+      visibilityHeight: {default: 300},
       duration: {type: Number, default: 250},
       onclick: {type: Function},
     },
@@ -37,12 +36,10 @@
         }, 8);
       };
       onMounted(() => {
-        watchEffect(() => {
-          const scrollTarget = props.target();
-          scrollTarget.onscroll = (e) => {
-            visibility.value = e.currentTarget.scrollTop >= props.visibilityHeight;
-          };
-        }, {flush: 'post'});
+        const scrollTarget = props.target();
+        scrollTarget.onscroll = (e) => {
+          visibility.value = e.currentTarget.scrollTop >= props.visibilityHeight;
+        };
       });
       return {visibility, backTop, clickHandler};
     },
@@ -50,7 +47,8 @@
 </script>
 
 <style lang="scss">
-  .m-back-top {
+  .link-back-top {
+    background-color: rgb(141, 141, 141);
     display: inline-block;
     line-height: 2em;
     padding: 0 0.5em;
@@ -59,10 +57,16 @@
     bottom: 50px;
     right: 50px;
 
-    .link-icon > svg {
-      &:hover {
-        fill: #272727;
+    .link-icon {
+      margin-top: 8px;
+
+      svg {
+        fill: #fff;
       }
+    }
+
+    &:hover {
+      background-color: #272727;
     }
   }
 </style>

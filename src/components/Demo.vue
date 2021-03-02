@@ -23,7 +23,8 @@
   import Button from '../lib/Button.vue';
   import 'prismjs';
   import 'prismjs/themes/prism.css';
-  import {computed, ref} from 'vue';
+  import {computed, ref, onMounted} from 'vue';
+  import {useRoute} from 'vue-router';
 
   const Prism = (window as any).Prism;
 
@@ -39,6 +40,12 @@
         return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html');
       });
       const codeVisible = ref(false);
+      onMounted(() => {
+        const path = useRoute().path;
+        if (path === '/doc/backToTop') {
+          codeVisible.value = true;
+        }
+      });
       const showCode = () => {
         codeVisible.value = true;
       };

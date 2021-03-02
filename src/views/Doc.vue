@@ -88,7 +88,7 @@
         width: 60%;
         height: 100%;
         left: 0;
-        top: 55px;
+        top: 44px;
         background: white;
         box-shadow: 5px 0 10px -5px #d4d4d4;
         z-index: 2;
@@ -146,7 +146,7 @@
       .pop {
         position: fixed;
         left: 0;
-        top: 55px;
+        top: 0;
         height: 100%;
         width: 100%;
         z-index: 1;
@@ -158,7 +158,10 @@
       }
 
       main {
-        margin: 40px 10px 20px 10px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+        padding: 40px 10px 20px 10px;
 
         br {
           color: red;

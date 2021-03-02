@@ -48,6 +48,7 @@
     padding: 8px;
     position: relative;
     box-shadow: 0 5px 8px -5px #d4d4d4;
+    z-index: 3;
 
     a {
       margin: 0 auto;

@@ -12,7 +12,7 @@
     props: {
       name: {
         type: String,
-        default: ""
+        default: ''
       },
     },
   };
@@ -24,7 +24,7 @@
 
     & + & {
       margin-left: 1em;
-      margin-top: 1em;
+      margin-top: 2em;
     }
 
     .icon {
