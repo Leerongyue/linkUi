@@ -3,7 +3,7 @@
     <div>
       <TopNav/>
     </div>
-    <div class="content">
+    <div class="content" :class="{hidden:asideVisible}">
       <transition name="slide-fade">
         <aside v-if="asideVisible">
           <h2>快速上手</h2>
@@ -38,7 +38,7 @@
 
 <script lang="ts">
   import TopNav from '../components/TopNav.vue';
-  import {inject, Ref} from 'vue';
+  import {inject, Ref, onMounted} from 'vue';
   import {router} from '../router';
 
   export default {
@@ -55,6 +55,20 @@
         {to: '/doc/icon', text: 'Icon组件'},
         {to: '/doc/input', text: 'Input组件'},
         {to: '/doc/backToTop', text: 'BackToTop组件'},
+        {to: '/doc/switch', text: 'Switch组件'},
+        {to: '/doc/button', text: 'Button组件'},
+        {to: '/doc/dialog', text: 'Dialog组件'},
+        {to: '/doc/tabs', text: 'Tabs组件'},
+        {to: '/doc/icon', text: 'Icon组件'},
+        {to: '/doc/input', text: 'Input组件'},
+        {to: '/doc/backToTop', text: 'BackToTop组件'},
+        {to: '/doc/switch', text: 'Switch组件'},
+        {to: '/doc/button', text: 'Button组件'},
+        {to: '/doc/dialog', text: 'Dialog组件'},
+        {to: '/doc/tabs', text: 'Tabs组件'},
+        {to: '/doc/icon', text: 'Icon组件'},
+        {to: '/doc/input', text: 'Input组件'},
+        {to: '/doc/backToTop', text: 'BackToTop组件'}
       ];
       const width = inject<number>('width');
       router.afterEach(() => {
@@ -82,16 +96,23 @@
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       padding: 0 16px;
+      position: relative;
 
       aside {
         position: fixed;
         width: 60%;
         height: 100%;
         left: 0;
-        top: 44px;
+        top: 43px;
         background: white;
         box-shadow: 5px 0 10px -5px #d4d4d4;
         z-index: 2;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+
+        ::-webkit-scrollbar {
+          width: 0 !important;
+        }
 
         h2 {
           display: inline-block;
@@ -139,7 +160,7 @@
 
         @media (min-width: 500px) {
           width: 20%;
-          top: 86px;
+          top: 76px;
         }
       }
 
