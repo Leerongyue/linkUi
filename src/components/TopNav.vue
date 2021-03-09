@@ -4,7 +4,9 @@
       <Icon name="icon-topLogo"/>
     </router-link>
     <ul>
-      <li class="menu">
+      <li><a href="https://github.com/Leerongyue/linkUi">Github</a></li>
+      <li><a href="https://gitee.com/leerongyue/link-ui">Gitee</a></li>
+      <li>
         <router-link to="/doc/intro">文档</router-link>
       </li>
     </ul>
@@ -106,6 +108,10 @@
       ul {
         display: flex;
         align-items: center;
+
+        li {
+          margin-right: 16px;
+        }
       }
 
       .switch {

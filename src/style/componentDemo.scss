@@ -16,4 +16,31 @@
       }
     }
   }
+
+  .link-section-table {
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        border-bottom: 1px solid #DCDFE6;
+        border-top: 1px solid #DCDFE6;
+
+        td {
+          text-align: center;
+          padding: 12px 0
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #DCDFE6;
+
+        td {
+          text-align: center;
+          padding: 20px 8px;
+        }
+      }
+    }
+  }
 }

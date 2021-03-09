@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-  import './icon.js';
-  import Icon from './Icon.vue';
-  import {onMounted, ref} from 'vue';
+  import "./icon.js";
+  import Icon from "./Icon.vue";
+  import {onMounted, ref} from "vue";
 
   export default {
     components: {
@@ -15,7 +15,7 @@
     },
     props: {
       target: {default: () => document || window},
-      visibilityHeight: {default: 300},
+      height: {default: 300},
       duration: {type: Number, default: 250},
       onclick: {type: Function},
     },
@@ -38,7 +38,7 @@
       onMounted(() => {
         const scrollTarget = props.target();
         scrollTarget.onscroll = (e) => {
-          visibility.value = e.currentTarget.scrollTop >= props.visibilityHeight;
+          visibility.value = e.currentTarget.scrollTop >= props.height;
         };
       });
       return {visibility, backTop, clickHandler};
@@ -56,6 +56,7 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
+    z-index: 1;
 
     .link-icon {
       margin-top: 8px;

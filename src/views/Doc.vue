@@ -78,7 +78,6 @@
     .content {
       flex-grow: 1;
       overflow: auto;
-      -webkit-overflow-scrolling: touch;
 
       aside {
         position: fixed;
@@ -162,10 +161,7 @@
       }
 
       main {
-        height: 100%;
         padding: 60px 10px 20px 10px;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
 
         @media (min-width: 500px) {
           margin-left: 23vw;
