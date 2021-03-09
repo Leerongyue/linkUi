@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-  import "./icon.js";
+  import "../assets/icon.js";
   import Icon from "./Icon.vue";
   import {onMounted, ref} from "vue";
 
