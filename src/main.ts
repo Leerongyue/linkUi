@@ -1,12 +1,12 @@
-import {createApp} from "vue";
-import App from "./App.vue";
-import "./lib/link.scss";
-import "./index.scss";
-import "github-markdown-css";
-import {router} from "./router";
-import Markdown from "./components/Markdown.vue";
+import './lib/link.scss';
+import './index.scss';
+import 'github-markdown-css';
+import {createApp} from 'vue';
+import App from './App.vue';
+import {router} from './router';
+import Markdown from './components/Markdown.vue';
 
 const app = createApp(App);
 app.use(router);
-app.mount("#app");
-app.component("Markdown", Markdown);
+app.mount('#app');
+app.component('Markdown', Markdown);

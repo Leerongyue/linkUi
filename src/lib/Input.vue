@@ -43,8 +43,8 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "src/style/helper";
-
+  $highlight: #108ee9;
+  $dark-color: #bfbfbf;
   .link-input {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
