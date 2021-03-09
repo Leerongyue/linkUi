@@ -3,7 +3,7 @@
     <div>
       <TopNav/>
     </div>
-    <div class="content" :class="{hidden:asideVisible}">
+    <div class="content">
       <transition name="slide-fade">
         <aside v-if="asideVisible">
           <h2>快速上手</h2>
@@ -37,40 +37,26 @@
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
-  import {inject, Ref, onMounted} from 'vue';
-  import {router} from '../router';
+  import TopNav from "../components/TopNav.vue";
+  import {inject, Ref, onMounted} from "vue";
+  import {router} from "../router";
 
   export default {
     components: {
       TopNav
     },
     setup() {
-      const asideVisible = inject<Ref<boolean>>('asideVisible');
+      const asideVisible = inject<Ref<boolean>>("asideVisible");
       const routerArr = [
-        {to: '/doc/switch', text: 'Switch组件'},
-        {to: '/doc/button', text: 'Button组件'},
-        {to: '/doc/dialog', text: 'Dialog组件'},
-        {to: '/doc/tabs', text: 'Tabs组件'},
-        {to: '/doc/icon', text: 'Icon组件'},
-        {to: '/doc/input', text: 'Input组件'},
-        {to: '/doc/backToTop', text: 'BackToTop组件'},
-        {to: '/doc/switch', text: 'Switch组件'},
-        {to: '/doc/button', text: 'Button组件'},
-        {to: '/doc/dialog', text: 'Dialog组件'},
-        {to: '/doc/tabs', text: 'Tabs组件'},
-        {to: '/doc/icon', text: 'Icon组件'},
-        {to: '/doc/input', text: 'Input组件'},
-        {to: '/doc/backToTop', text: 'BackToTop组件'},
-        {to: '/doc/switch', text: 'Switch组件'},
-        {to: '/doc/button', text: 'Button组件'},
-        {to: '/doc/dialog', text: 'Dialog组件'},
-        {to: '/doc/tabs', text: 'Tabs组件'},
-        {to: '/doc/icon', text: 'Icon组件'},
-        {to: '/doc/input', text: 'Input组件'},
-        {to: '/doc/backToTop', text: 'BackToTop组件'}
+        {to: "/doc/switch", text: "Switch组件"},
+        {to: "/doc/button", text: "Button组件"},
+        {to: "/doc/dialog", text: "Dialog组件"},
+        {to: "/doc/tabs", text: "Tabs组件"},
+        {to: "/doc/icon", text: "Icon组件"},
+        {to: "/doc/input", text: "Input组件"},
+        {to: "/doc/backToTop", text: "BackToTop组件"},
       ];
-      const width = inject<number>('width');
+      const width = inject<number>("width");
       router.afterEach(() => {
         if (width <= 500) {
           asideVisible.value = false;
@@ -171,7 +157,7 @@
         height: 100%;
         width: 100%;
         z-index: 1;
-        opacity: 0.5;
+        opacity: 1;
 
         @media (min-width: 500px) {
           display: none;

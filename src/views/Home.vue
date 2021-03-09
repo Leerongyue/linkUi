@@ -10,29 +10,23 @@
     </div>
     <div class="intro">
       <div class="unit">
-        <svg class="icon">
-          <use xlink:href="#icon-Vue"></use>
-        </svg>
+        <Icon name="icon-Vue" style="margin-left: 16px"/>
         <div class="text">
-          <h2>基于Vue3</h2>
+          <h3>基于Vue3</h3>
           <span>使用了Vue3 Composition API</span>
         </div>
       </div>
       <div class="unit">
-        <svg class="icon">
-          <use xlink:href="#icon-ts"></use>
-        </svg>
+        <Icon name="icon-ts"/>
         <div class="text">
-          <h2>基于TypeScript</h2>
+          <h3>基于TypeScript</h3>
           <span>源代码采用TypeScript书写</span>
         </div>
       </div>
       <div class="unit">
-        <svg class="icon">
-          <use xlink:href="#icon-light"></use>
-        </svg>
+        <Icon name="icon-light"/>
         <div class="text">
-          <h2>代码易读</h2>
+          <h3>代码易读</h3>
           <span>给个组件的代码都极其简洁</span>
         </div>
       </div>
@@ -41,10 +35,12 @@
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
+  import TopNav from "../components/TopNav.vue";
+  import Icon from "../lib/Icon.vue";
 
   export default {
     components: {
+      Icon,
       TopNav
     }
   };
@@ -81,6 +77,7 @@
       h2 {
         margin: 8px 0;
       }
+
     }
 
     .intro {
@@ -93,10 +90,19 @@
       .unit {
         display: flex;
         align-items: center;
+        margin-bottom: 16px;
 
-        svg {
-          width: 6em;
-          height: 6em;
+        span {
+          font-size: 14px;
+        }
+
+        h3 {
+          font-weight: bold;
+        }
+
+        ::v-deep svg {
+          width: 3em;
+          height: 3em;
           margin-right: 16px;
         }
 
@@ -105,7 +111,6 @@
           color: rgb(111, 72, 107);
           display: flex;
           flex-direction: column;
-
         }
       }
     }
