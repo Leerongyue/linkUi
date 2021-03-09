@@ -22,14 +22,14 @@
 </template>
 
 <script lang="ts">
-  import {inject, Ref, onMounted} from 'vue';
-  import {useRoute} from 'vue-router';
-  import Icon from '../lib/Icon.vue';
+  import {inject, Ref, onMounted} from "vue";
+  import {useRoute} from "vue-router";
+  import Icon from "../lib/Icon.vue";
 
   export default {
     components: {Icon},
     setup() {
-      const asideVisible = inject<Ref<boolean>>('asideVisible');
+      const asideVisible = inject<Ref<boolean>>("asideVisible");
       const toggleMenu = () => {
         asideVisible.value = !asideVisible.value;
       };
@@ -46,9 +46,12 @@
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-shadow: 0 5px 8px -5px #d4d4d4;
-    z-index: 3;
+    z-index: 10;
+    background: white;
 
     a {
       margin: 0 auto;

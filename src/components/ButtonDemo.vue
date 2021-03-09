@@ -68,5 +68,5 @@
 </script>
 
 <style lang="scss" scoped>
- @import "src/style/componentDemo";
+  @import "src/style/componentDemo";
 </style>

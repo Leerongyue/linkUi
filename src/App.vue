@@ -5,15 +5,15 @@
 </template>
 
 <script lang="ts">
-  import {ref, provide} from 'vue';
+  import {ref, provide} from "vue";
 
   export default {
-    name: 'App',
+    name: "App",
     setup() {
       const width = document.documentElement.clientWidth;
       const asideVisible = ref(width > 500);
-      provide('asideVisible', asideVisible);
-      provide('width', width);
+      provide("asideVisible", asideVisible);
+      provide("width", width);
     }
   };
 </script>
@@ -26,7 +26,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $font-hei;

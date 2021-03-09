@@ -1,9 +1,7 @@
 <template>
   <div class="doc">
-    <div>
-      <TopNav/>
-    </div>
-    <div class="content">
+    <TopNav/>
+    <div class="content" id="scrollContainer">
       <transition name="slide-fade">
         <aside v-if="asideVisible">
           <h2>快速上手</h2>
@@ -29,7 +27,7 @@
       <transition name="slide-fade">
         <div class="pop" v-if="asideVisible" @click="asideVisible=false"></div>
       </transition>
-      <main id="scrollContainer">
+      <main>
         <router-view/>
       </main>
     </div>
@@ -81,23 +79,22 @@
       flex-grow: 1;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
-      padding: 0 16px;
-      position: relative;
 
       aside {
         position: fixed;
         width: 60%;
         height: 100%;
         left: 0;
-        top: 43px;
+        top: 0;
+        padding-top: 48px;
         background: white;
         box-shadow: 5px 0 10px -5px #d4d4d4;
         z-index: 2;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
 
-        ::-webkit-scrollbar {
-          width: 0 !important;
+        &::-webkit-scrollbar {
+          display: none;
         }
 
         h2 {
@@ -146,7 +143,7 @@
 
         @media (min-width: 500px) {
           width: 20%;
-          top: 76px;
+          padding-top: 100px;
         }
       }
 
@@ -165,17 +162,14 @@
       }
 
       main {
+        height: 100%;
+        padding: 60px 10px 20px 10px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        height: 100%;
-        padding: 40px 10px 20px 10px;
-
-        br {
-          color: red;
-        }
 
         @media (min-width: 500px) {
           margin-left: 23vw;
+          padding-top: 100px;
         }
       }
 
