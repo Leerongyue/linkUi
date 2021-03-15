@@ -5,10 +5,10 @@
     import 'link-ui/dist/lib/link.css'
     import { createApp } from 'vue'
     import App from './App.vue'
-    import { linkUI } from 'link-ui'
+    import { link-ui } from 'link-ui'
 
     createApp(App)
-      .use(linkUI)
+      .use(link-ui)
       .mount('#app')
 >     
 > 以上代码便完成了 link-ui 的引入。需要注意的是，样式文件需要单独引入。
@@ -38,7 +38,6 @@
         .component('Button',Button)
         .component('Switch',Switch)
         .component('Dialog',Dialog)
-        .component('TabBox',TabBox)
         .component('Tabs',Tabs)
         
 上一节：[安装](#/doc/install)

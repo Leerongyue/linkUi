@@ -6,21 +6,21 @@
 </template>
 
 <script lang="ts">
-  import {computed} from "vue";
+  import {computed} from 'vue';
 
   export default {
     props: {
       theme: {
         type: String,
-        default: "button"
+        default: 'button'
       },
       size: {
         type: String,
-        default: "normal"
+        default: 'normal'
       },
       level: {
         type: String,
-        default: "normal"
+        default: 'normal'
       },
       disabled: {
         type: Boolean,
@@ -50,7 +50,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $h: 32px;
   $border-color: #d9d9d9;
   $color: #333;
@@ -304,11 +304,7 @@
       animation: link-spin 1s infinite linear;
     }
 
-    &:hover {
-      @media (min-width: 500px) {
-        transform: translateY(-4px);
-      }
-    }
+    
   }
 
   @keyframes link-spin {

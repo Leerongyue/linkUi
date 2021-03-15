@@ -1,8 +1,8 @@
 <template>
-  <button class="link-button" :class="{'link-checked':value}" @click="toggle">
+  <button class="link-switch" :class="{'link-switch-checked':value}" @click="toggle">
     <span></span>
-    <p class="link-on" v-if="value">on</p>
-    <p class="link-off" v-else>off</p>
+    <p class="link-switch-on" v-if="value">on</p>
+    <p class="link-switch-off" v-else>off</p>
   </button>
 </template>
 
@@ -14,17 +14,17 @@
     },
     setup(props, context) {
       const toggle = () => {
-        context.emit("update:value", !props.value);
+        context.emit('update:value', !props.value);
       };
       return {toggle};
     }
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $h: 22px;
   $h2: $h - 4px;
-  .link-button {
+  .link-switch {
     height: $h;
     width: $h*2;
     border: none;
@@ -50,7 +50,7 @@
       }
     }
 
-    &.link-checked {
+    &.link-switch-checked {
       background: rgb(24, 144, 255);
 
       span {
@@ -66,18 +66,18 @@
     }
 
 
-    .link-on, .link-off {
+    .link-switch-on, .link-switch-off {
       color: white;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
     }
 
-    .link-off {
+    .link-switch-off {
       right: 4px;
     }
 
-    .link-on {
+    .link-switch-on {
       left: 4px;
     }
 

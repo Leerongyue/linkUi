@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install LinkUI
+npm install link-ui
 ```
 
 或
 
 ```
-yarn add LinkUI
+yarn add link-ui
 ```
 
 <br>
