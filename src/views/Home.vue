@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="banner">
-      <h1>LinkUI</h1>
+      <h1>link-ui</h1>
       <h2>基于Vue3.0的UI框架</h2>
       <div>
         <a href="https://github.com/Leerongyue/linkUi">Github</a>

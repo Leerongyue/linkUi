@@ -105,7 +105,7 @@
     &-actions {
       padding: 16px;
 
-      .link-button {
+      .link-button-wrapper {
         margin-top: 0;
 
         &:hover {

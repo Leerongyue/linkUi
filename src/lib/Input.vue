@@ -1,6 +1,7 @@
 <template>
-  <div class="link-input" :class="{'link-disabled':disabled}">
+  <div class="link-input-wrapper" :class="{'link-input-wrapper-disabled':disabled}">
     <input
+      class="link-input"
       :class="{'link-input-round':round ,'link-input-focused': focused,'link-input-disabled': disabled}"
       v-bind="$attrs"
       @change="onchange"
@@ -13,9 +14,9 @@
 </template>
 
 <script lang="ts">
-  import {SetupContext} from 'vue';
-  import {ref} from 'vue';
-  import Dialog from './Dialog.vue';
+  import {SetupContext} from "vue";
+  import {ref} from "vue";
+  import Dialog from "./Dialog.vue";
 
   export default {
     components: {Dialog},
@@ -27,25 +28,25 @@
     setup(props, context: SetupContext<any>) {
       const focused = ref(false);
       const oninput = (e: KeyboardEvent) => {
-        context.emit('update:value', (e.target as HTMLInputElement).value);
+        context.emit("update:value", (e.target as HTMLInputElement).value);
       };
       const showShadow = () => {
         focused.value = true;
-        context.emit('focus');
+        context.emit("focus");
       };
       const hideShadow = () => {
         focused.value = false;
-        context.emit('blur');
+        context.emit("blur");
       };
       return {oninput, focused, showShadow, hideShadow, onchange};
     },
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $highlight: #108ee9;
   $dark-color: #bfbfbf;
-  .link-input {
+  .link-input-wrapper {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     position: relative;
@@ -54,13 +55,15 @@
     align-items: center;
     margin-top: 1em;
 
-    &.link-disabled {
+    &.link-input-wrapper-disabled {
       * {
         cursor: not-allowed;
       }
     }
 
-    input {
+    .link-input {
+      border: 1px solid #d4d4d4;
+      background: none;
       padding: 5px 10px;
       margin: 0;
       display: inline-block;
@@ -69,7 +72,7 @@
       color: rgba(0, 0, 0, 0.85);
       font-size: 14px;
       line-height: 1.5;
-      background-color: #fff;
+      background: #fff;
       border-radius: 2px;
       outline: none;
 

@@ -1,26 +1,26 @@
 <template>
-  <button class="link-button" :class='classes' :disabled="disabled">
-    <span class="link-loadingIndicator" v-if="loading"></span>
+  <button class="link-button-wrapper" :class='classes' :disabled="disabled">
+    <span class="link-button-loadingIndicator" v-if="loading"></span>
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
-  import {computed} from 'vue';
+  import {computed} from "vue";
 
   export default {
     props: {
       theme: {
         type: String,
-        default: 'button'
+        default: "button"
       },
       size: {
         type: String,
-        default: 'normal'
+        default: "normal"
       },
       level: {
         type: String,
-        default: 'normal'
+        default: "normal"
       },
       disabled: {
         type: Boolean,
@@ -39,9 +39,9 @@
       const {theme, size, level, round} = props;
       const classes = computed(() => {
         return {
-          [`link-theme-${theme}`]: theme,
-          [`link-size-${size}`]: size,
-          [`link-level-${level}`]: level,
+          [`link-button-theme-${theme}`]: theme,
+          [`link-button-size-${size}`]: size,
+          [`link-button-level-${level}`]: level,
           [`link-button-round`]: round,
         };
       });
@@ -61,7 +61,7 @@
   $red: red;
   $grey: grey;
 
-  .link-button {
+  .link-button-wrapper {
     padding: 3px 20px;
     cursor: pointer;
     display: inline-flex;
@@ -91,7 +91,7 @@
       border: 0;
     }
 
-    &.link-theme-link {
+    &.link-button-theme-link {
       border-color: transparent;
       box-shadow: none;
       color: $blue;
@@ -101,7 +101,7 @@
       }
     }
 
-    &.link-theme-text {
+    &.link-button-theme-text {
       border-color: transparent;
       box-shadow: none;
       color: inherit;
@@ -111,25 +111,25 @@
       }
     }
 
-    &.link-size-big {
+    &.link-button-size-big {
       font-size: 24px;
       height: 48px;
       padding: 0 16px;
     }
 
-    &.link-size-small {
+    &.link-button-size-small {
       font-size: 12px;
       height: 20px;
       padding: 0 4px;
     }
 
-    &.link-theme-button {
+    &.link-button-theme-button {
       &.link-button-round {
         border-radius: 24px;
         color: black;
       }
 
-      &.link-level-main {
+      &.link-button-level-main {
         background: $blue;
         color: white;
         border-color: $blue;
@@ -146,7 +146,7 @@
         }
       }
 
-      &.link-level-success {
+      &.link-button-level-success {
         background: $green;
         color: white;
         border-color: $green;
@@ -163,7 +163,7 @@
         }
       }
 
-      &.link-level-warning {
+      &.link-button-level-warning {
         background: $yellow;
         color: white;
         border-color: $yellow;
@@ -180,7 +180,7 @@
         }
       }
 
-      &.link-level-danger {
+      &.link-button-level-danger {
         background: $red;
         border-color: $red;
         color: white;
@@ -198,8 +198,8 @@
       }
     }
 
-    &.link-theme-link {
-      &.link-level-danger {
+    &.link-button-theme-link {
+      &.link-button-level-danger {
         color: $red;
 
         &:hover,
@@ -208,7 +208,7 @@
         }
       }
 
-      &.link-level-success {
+      &.link-button-level-success {
         color: $green;
 
         &:hover,
@@ -217,7 +217,7 @@
         }
       }
 
-      &.link-level-warning {
+      &.link-button-level-warning {
         color: $yellow;
 
         &:hover,
@@ -228,8 +228,8 @@
     }
 
 
-    &.link-theme-text {
-      &.link-level-main {
+    &.link-button-theme-text {
+      &.link-button-level-main {
         color: $blue;
 
         &:hover,
@@ -238,7 +238,7 @@
         }
       }
 
-      &.link-level-danger {
+      &.link-button-level-danger {
         color: $red;
 
         &:hover,
@@ -247,7 +247,7 @@
         }
       }
 
-      &.link-level-success {
+      &.link-button-level-success {
         color: $green;
 
         &:hover,
@@ -256,7 +256,7 @@
         }
       }
 
-      &.link-level-warning {
+      &.link-button-level-warning {
         color: $yellow;
 
         &:hover,
@@ -266,7 +266,7 @@
       }
     }
 
-    &.link-theme-button {
+    &.link-button-theme-button {
       &[disabled] {
         &:hover {
           transform: none;
@@ -281,7 +281,7 @@
       }
     }
 
-    &.link-theme-link, &.link-theme-text {
+    &.link-button-theme-link, &.link-button-theme-text {
       &[disabled] {
         &:hover {
           transform: none;
@@ -292,7 +292,7 @@
       }
     }
 
-    .link-loadingIndicator {
+    .link-button-loadingIndicator {
       display: inline-block;
       width: 14px;
       height: 14px;
@@ -301,13 +301,13 @@
       border-color: $blue $blue $blue transparent;
       border-style: solid;
       border-width: 2px;
-      animation: link-spin 1s infinite linear;
+      animation: link-button-spin 1s infinite linear;
     }
 
-    
+
   }
 
-  @keyframes link-spin {
+  @keyframes link-button-spin {
     0% {
       transform: rotate(0deg);
     }

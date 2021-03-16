@@ -4,7 +4,7 @@
 <template>
   <div>
     <Input v-model:value="content" placeholder="支持blur事件" @blur="onBlur"></Input>
-    <Dialog v-model:visible="showDialog">
+    <Dialog v-model:visible="showDialog" :ok="f1">
       <template v-slot:title>
         <span>@blur</span>
       </template>
@@ -28,8 +28,11 @@
       const onBlur = () => {
         showDialog.value = true;
       };
+      const f1 = () => {
+        return true;
+      };
       return {
-        content, onBlur, showDialog
+        content, f1, onBlur, showDialog
       };
     }
   };

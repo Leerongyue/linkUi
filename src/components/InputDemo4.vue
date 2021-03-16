@@ -4,7 +4,7 @@
 <template>
   <div>
     <Input v-model:value="content" placeholder="支持focus事件" @focus="onFocus"></Input>
-    <Dialog v-model:visible="showDialog">
+    <Dialog v-model:visible="showDialog" :ok="f1">
       <template v-slot:title>
         <span>@focus</span>
       </template>
@@ -28,8 +28,11 @@
       const onFocus = () => {
         showDialog.value = true;
       };
+      const f1 = () => {
+        return true;
+      };
       return {
-        content, onFocus, showDialog
+        content, onFocus, showDialog, f1
       };
     }
   };

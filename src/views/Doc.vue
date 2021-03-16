@@ -35,26 +35,26 @@
 </template>
 
 <script lang="ts">
-  import TopNav from '../components/TopNav.vue';
-  import {inject, Ref, onMounted} from 'vue';
-  import {router} from '../router';
+  import TopNav from "../components/TopNav.vue";
+  import {inject, Ref, onMounted} from "vue";
+  import {router} from "../router";
 
   export default {
     components: {
       TopNav
     },
     setup() {
-      const asideVisible = inject<Ref<boolean>>('asideVisible');
+      const asideVisible = inject<Ref<boolean>>("asideVisible");
       const routerArr = [
-        {to: '/doc/switch', text: 'Switch组件'},
-        {to: '/doc/button', text: 'Button组件'},
-        {to: '/doc/dialog', text: 'Dialog组件'},
-        {to: '/doc/tabs', text: 'Tabs组件'},
-        {to: '/doc/icon', text: 'Icon组件'},
-        {to: '/doc/input', text: 'Input组件'},
-        {to: '/doc/backToTop', text: 'BackToTop组件'},
+        {to: "/doc/switch", text: "Switch 开关"},
+        {to: "/doc/button", text: "Button 按钮"},
+        {to: "/doc/dialog", text: "Dialog 对话"},
+        {to: "/doc/tabs", text: "Tabs 导航"},
+        {to: "/doc/icon", text: "Icon 图标"},
+        {to: "/doc/input", text: "Input 输入框"},
+        {to: "/doc/backToTop", text: "BackToTop 置顶"},
       ];
-      const width = inject<number>('width');
+      const width = inject<number>("width");
       router.afterEach(() => {
         if (width <= 500) {
           asideVisible.value = false;
